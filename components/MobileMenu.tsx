@@ -40,7 +40,7 @@ const MobileMenu = () => {
                 // <div className="absolute right-[-8px] mt-2 w-screen bg-white shadow-lg py-2 z-50 h-screen border-t border-black">
                 // <div className="fixed flex flex-col justify-between top-18 left-0 w-screen h-screen bg-white shadow-lg z-50">
                 <div
-                    className="fixed flex flex-col justify-between top-18 left-0 w-screen bg-white shadow-lg z-50 overflow-y-auto gap-4"
+                    className="fixed flex flex-col top-18 left-0 w-screen bg-white shadow-lg z-50 overflow-y-auto gap-4"
                     style={{ height: 'calc(100vh - 4.5rem)' }} // 4.5rem = h-18 = 72px
                 >
                     <div className='flex flex-col w-full'>
