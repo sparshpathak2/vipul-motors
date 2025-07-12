@@ -1,24 +1,31 @@
 import Image from 'next/image'
 import React from 'react'
+import MobileMenu from './MobileMenu'
 
 export default function Navbar() {
     return (
-        <div className='flex w-full px-16 h-18 justify-between items-center border-b border-gray-200'>
+        <div className='flex w-full px-2 sm:px-16 h-18 justify-between items-center border-b border-gray-200'>
             {/* <div>
                 Navbar
             </div> */}
-            <a href='/'>
-                <Image
-                    width={64}
-                    height={64}
-                    alt='Vipul Motors Logo'
-                    // className='h-10'
-                    className='h-full w-full'
-                    // src='/Logo-5.svg'
-                    src='/Vipul-Motors-Logo.png'
-                />
-            </a>
-            <div className='flex gap-8 h-full items-center'>
+            <div className='flex items-center gap-2'>
+                <a href='/'>
+                    <Image
+                        width={64}
+                        height={64}
+                        alt='Vipul Motors Logo'
+                        // className='h-10'
+                        // className='h-full w-full'
+                        className='h-12 w-12 sm:w-full sm:h-full'
+                        // src='/Logo-5.svg'
+                        src='/Vipul-Motors-Logo.png'
+                    />
+                </a>
+                <div className='text-[16px] sm:text-[20px] italic font-bold text-blue-900'>VIPUL MOTORS</div>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className='hidden lg:flex gap-8 h-full items-center'>
                 {/* <a
                     href="/"
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
@@ -122,6 +129,9 @@ export default function Navbar() {
                 </div>
 
             </div>
+
+            {/* Mobile Menu */}
+            <MobileMenu />
         </div>
     )
 }

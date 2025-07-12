@@ -24,13 +24,15 @@ export default function Home() {
     <div className="flex w-full flex-col">
       {/* <LocationPopup onConfirm={handleLocationConfirmed} /> */}
       <LocationPopup />
-      <SubNavbar />
+      <div className="hidden sm:block">
+        <SubNavbar />
+      </div>
       <Navbar />
       <HeroCarousel />
       {/* <div className="flex w-full pl-48 pr-16 py-12"> */}
-      <div className="flex w-full px-40 py-20">
+      <div className="flex flex-col sm:flex-row w-full px-4 sm:px-40 py-8 sm:py-20 gap-8 sm:gap-0">
 
-        <div className="flex flex-col w-2/5 gap-2">
+        <div className="flex flex-col w-full sm:w-2/5 gap-2">
 
           <hr className="my-6 border-t border-red-600 w-24" />
           <div className="flex flex-col gap-4">
@@ -39,12 +41,12 @@ export default function Home() {
               <div className="text-3xl">Welcome to Vipul Maruti!</div>
               <div className="text-red-600">DRIVEN BY TRUST. DEFINED  BY EXCELLENCE.</div>
             </div>
-            <div className="text-gray-600 pr-20">At Vipul, we believe that our relationship doesn’t end with getting you a new car. Its just the beginning of a long relationship which will need constant support and quality experience.</div>
+            <div className="text-gray-600 sm:pr-20">At Vipul, we believe that our relationship doesn’t end with getting you a new car. Its just the beginning of a long relationship which will need constant support and quality experience.</div>
           </div>
 
         </div>
 
-        <div className="w-3/5 flex items-center justify-center">
+        <div className="w-full sm:w-3/5 flex items-center justify-center">
           <div className="grid grid-cols-2 gap-6">
 
             <div className="flex flex-col gap-2">
@@ -102,7 +104,7 @@ export default function Home() {
 
       </div>
 
-      <div className="flex flex-col gap-2 items-center text-center w-[900px] mx-auto py-8">
+      <div className="flex flex-col gap-2 items-center text-center w-[80%] mx-auto py-8">
 
         <div className="flex flex-col gap-2">
           <div className="text-3xl">About Us</div>

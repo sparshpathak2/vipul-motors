@@ -8,6 +8,7 @@ const images = [
     "/c-1.webp",
     "/c-2.webp",
     "/c-3.webp",
+    // "/c-4m.webp",
 ];
 
 
@@ -28,7 +29,8 @@ export default function HeroCarousel() {
 
     return (
         // <div className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-lg shadow-md aspect-[1366/523]">
-        <div className="relative w-full mx-auto overflow-hidden aspect-[1366/523]">
+        // <div className="relative w-full mx-auto overflow-hidden aspect-[360/283] sm:aspect-[1366/523]">
+        <div className="relative w-full mx-auto overflow-hidden sm:aspect-[1366/523]">
             {/* <div className="relative w-full mx-auto overflow-hidden h-[400px]"> */}
             {/* Carousel Track */}
             <div
