@@ -3,17 +3,19 @@ import React from 'react'
 
 export default function Navbar() {
     return (
-        <div className='flex w-full px-16 h-16 justify-between items-center border-b border-gray-200'>
+        <div className='flex w-full px-16 h-18 justify-between items-center border-b border-gray-200'>
             {/* <div>
                 Navbar
             </div> */}
             <a href='/'>
                 <Image
-                    width={100}
-                    height={100}
+                    width={64}
+                    height={64}
                     alt='Vipul Motors Logo'
-                    className='h-10'
-                    src='/Logo-5.svg'
+                    // className='h-10'
+                    className='h-full w-full'
+                    // src='/Logo-5.svg'
+                    src='/Vipul-Motors-Logo.png'
                 />
             </a>
             <div className='flex gap-8 h-full items-center'>
