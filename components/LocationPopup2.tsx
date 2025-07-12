@@ -23,6 +23,20 @@ const LocationPopup: React.FC = () => {
         }
     }, [])
 
+    // 🧠 Prevent body scroll when menu is open
+    useEffect(() => {
+        if (showPopup) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Clean up on unmount
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [showPopup]);
+
     const handleSelectLocation = (city: string) => {
         sessionStorage.setItem("locationConfirmed", "true")
         setShowPopup(false)
@@ -34,7 +48,8 @@ const LocationPopup: React.FC = () => {
 
     return (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-            <div className="bg-white p-6 rounded-lg text-center shadow-lg min-w-[600px]">
+            {/* <div className="bg-white p-6 rounded-lg text-center shadow-lg min-w-[600px]"> */}
+            <div className="bg-white p-4 sm:p-6 mx-2 sm:mx-0 w-full rounded-lg text-center shadow-lg max-w-[600px]">
                 <p className="mb-4 text-gray-800 font-semibold text-2xl">
                     Select City
                 </p>
