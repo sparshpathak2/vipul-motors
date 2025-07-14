@@ -29,7 +29,214 @@ export default function Home() {
       </div>
       <Navbar />
       <HeroCarousel />
-      {/* <div className="flex w-full pl-48 pr-16 py-12"> */}
+
+      {/* Service Types Desktop */}
+      <div className="hidden sm:flex flex-col sm:flex-row w-full h-64 gap-2 group p-2">
+        {/* BOX 1 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/arena-bg.jpg')" }}
+          ></div>
+          <div
+            // className="absolute h-full inset-0 flex flex-col items-center justify-start p-4 bg-black/50 opacity-0 translate-y-8 hover:opacity-100"
+            className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-4 opacity-0 translate-y-8 hover:opacity-100 hover:translate-y-0 transition-all duration-300"
+          >
+            <div className="h-1/2 flex items-center justify-center w-full">
+              <Image
+                src={"/arena-logo.webp"}
+                width={360}
+                height={360}
+                alt="Arena Logo"
+              />
+            </div>
+            <div className="h-1/2 flex flex-col gap-2 text-center px-2">
+              <p className="text-white text-lg font-semibold">ARENA</p>
+              <p className="text-white font-medium">Explore the 'World of Arena' built on experience, technology & design.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOX 2 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/nexa-bg.webp')" }}
+          ></div>
+          <div
+            // className="absolute h-full inset-0 flex flex-col items-center justify-start p-4 bg-black/50 opacity-0 translate-y-8 hover:opacity-100"
+            className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-4 opacity-0 translate-y-8 hover:opacity-100 hover:translate-y-0 transition-all duration-300"
+          >
+            <div className="h-1/2 flex items-center justify-center w-full">
+              <Image
+                src={"/nexa-logo.png"}
+                width={200}
+                height={200}
+                alt="Arena Logo"
+              />
+            </div>
+            <div className="h-1/2 flex flex-col gap-2 text-center px-2">
+              <p className="text-white text-lg font-semibold">NEXA</p>
+              <p className="text-white font-medium">Indulge in the premium experience of innovation & extraordinary creation that's created to inspire.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOX 3 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/commercial-bg.webp')" }}
+          ></div>
+          <div
+            // className="absolute h-full inset-0 flex flex-col items-center justify-start p-4 bg-black/50 opacity-0 translate-y-8 hover:opacity-100"
+            className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-4 opacity-0 translate-y-8 hover:opacity-100 hover:translate-y-0 transition-all duration-300"
+          >
+            <div className="h-1/2 flex items-center justify-center w-full">
+              <Image
+                src={"/commercial-logo.webp"}
+                width={360}
+                height={360}
+                alt="Arena Logo"
+              />
+            </div>
+            <div className="h-1/2 flex flex-col gap-2 text-center px-2">
+              <p className="text-white text-lg font-semibold">COMMERCIAL</p>
+              <p className="text-white font-medium">Explore the 'World of Arena' built on experience, technology & design.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOX 4 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/true-value-bg.jpeg')" }}
+          ></div>
+          <div
+            // className="absolute h-full inset-0 flex flex-col items-center justify-start p-4 bg-black/50 opacity-0 translate-y-8 hover:opacity-100"
+            className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center p-4 opacity-0 translate-y-8 hover:opacity-100 hover:translate-y-0 transition-all duration-300"
+          >
+            <div className="h-1/2 flex items-center justify-center w-full">
+              <Image
+                src={"/true-value-logo.png"}
+                width={240}
+                height={240}
+                alt="Arena Logo"
+              />
+            </div>
+            <div className="flex flex-col gap-2 text-center px-2">
+              <p className="text-white text-lg font-semibold">TRUE VALUE</p>
+              <p className="text-white font-medium">Leading destination for pre-owned cars.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Service Types Mobile */}
+      <div className="flex sm:hidden flex-col sm:flex-row w-full h-200 gap-2 group p-2">
+        {/* BOX 1 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/arena-bg.jpg')" }}
+          ></div>
+          <div
+            className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-100"
+          >
+            <div className="h-1/2 flex items-center justify-center w-full">
+              <Image
+                src={"/arena-logo.webp"}
+                width={100}
+                height={100}
+                alt="Arena Logo"
+                className="w-72 h-auto"
+              />
+            </div>
+            <div className="h-2/3 flex flex-col gap-1 text-center justify-center px-2">
+              <p className="text-white font-semibold">ARENA</p>
+              <p className="text-white font-medium">Explore the 'World of Arena' built on experience, technology & design.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOX 2 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/nexa-bg.webp')" }}
+          ></div>
+          <div
+            className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-100"
+          >
+            <div className="h-1/3 flex items-center justify-center w-full">
+              <Image
+                src={"/nexa-logo.png"}
+                width={100}
+                height={100}
+                alt="Arena Logo"
+                className="w-36 h-auto"
+              />
+            </div>
+            <div className="h-2/3 flex flex-col gap-1 text-center justify-center px-2">
+              <p className="text-white font-semibold">NEXA</p>
+              <p className="text-white font-medium">Indulge in the premium experience of innovation & extraordinary creation that's created to inspire.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOX 3 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/commercial-bg.webp')" }}
+          ></div>
+          <div
+            className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-100"
+          >
+            <div className="h-1/3 flex items-center justify-center w-full">
+              <Image
+                src={"/commercial-logo.webp"}
+                width={100}
+                height={100}
+                alt="Arena Logo"
+                className="w-72 h-auto"
+              />
+            </div>
+            <div className="h-2/3 flex flex-col gap-1 text-center justify-center px-2">
+              <p className="text-white font-semibold">COMMERCIAL</p>
+              <p className="text-white font-medium">Explore the 'World of Arena' built on experience, technology & design.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* BOX 4 */}
+        <div className="flex-1 overflow-hidden relative transition-all duration-300 group-hover:flex-[1] hover:flex-[1.5]">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-300 hover:scale-110"
+            style={{ backgroundImage: "url('/true-value-bg.jpeg')" }}
+          ></div>
+          <div
+            className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center opacity-100"
+          >
+            <div className="h-1/3 flex items-center justify-center w-full">
+              <Image
+                src={"/true-value-logo.png"}
+                width={100}
+                height={100}
+                alt="Arena Logo"
+                className="w-48 h-auto"
+              />
+            </div>
+            <div className="h-2/3 flex flex-col gap-1 text-center justify-center px-2">
+              <p className="text-white font-semibold">TRUE VALUE</p>
+              <p className="text-white font-medium">Leading destination for pre-owned cars.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div className="flex flex-col sm:flex-row w-full px-4 sm:px-40 py-8 sm:py-20 gap-8 sm:gap-0">
 
         <div className="flex flex-col w-full sm:w-2/5 gap-2">
@@ -134,10 +341,6 @@ export default function Home() {
 
       </div>
 
-      {/* <div className="flex w-full h-24 gap-6 items-center justify-center">
-        This the main homepage
-        <Button>Test Button</Button>
-      </div> */}
     </div>
   );
 }

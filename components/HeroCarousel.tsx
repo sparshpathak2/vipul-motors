@@ -1,19 +1,26 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const images = [
-    "/c-1.webp",
-    "/c-2.webp",
-    "/c-3.webp",
-    // "/c-4m.webp",
-];
-
+const desktopImages = ["/c-1.webp", "/c-2.webp", "/c-3.webp"];
+const mobileImages = ["/c-4m.webp", "/c-4m.webp", "/c-4m.webp"];
 
 export default function HeroCarousel() {
     const [current, setCurrent] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkScreen = () => {
+            setIsMobile(window.innerWidth < 640); // Tailwind's sm breakpoint
+        };
+
+        checkScreen();
+        window.addEventListener("resize", checkScreen);
+        return () => window.removeEventListener("resize", checkScreen);
+    }, []);
+
+    const images = isMobile ? mobileImages : desktopImages;
 
     const nextSlide = () =>
         setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -25,14 +32,14 @@ export default function HeroCarousel() {
             nextSlide();
         }, 4000);
         return () => clearInterval(interval);
-    }, []);
+    }, [images]);
 
     return (
-        // <div className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-lg shadow-md aspect-[1366/523]">
-        // <div className="relative w-full mx-auto overflow-hidden aspect-[360/283] sm:aspect-[1366/523]">
-        <div className="relative w-full mx-auto overflow-hidden sm:aspect-[1366/523]">
-            {/* <div className="relative w-full mx-auto overflow-hidden h-[400px]"> */}
-            {/* Carousel Track */}
+        <div
+            className={`relative w-full mx-auto overflow-hidden ${isMobile ? "aspect-[360/283]" : "aspect-[1366/523]"
+                }`}
+        >
+            {/* Carousel track */}
             <div
                 className="flex transition-transform duration-700 ease-in-out h-full"
                 style={{
@@ -49,21 +56,19 @@ export default function HeroCarousel() {
                         <img
                             src={src}
                             alt={`Slide ${idx}`}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 ))}
             </div>
 
-            {/* Action Buttons */}
+            {/* Navigation buttons */}
             <button
                 onClick={prevSlide}
                 className="absolute top-1/2 left-4 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow"
             >
                 <ChevronLeft className="h-6 w-6 text-gray-800" />
             </button>
-
-            {/* Right Arrow */}
             <button
                 onClick={nextSlide}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow"
