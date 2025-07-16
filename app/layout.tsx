@@ -30,7 +30,7 @@ export default function RootLayout({
             <div className="hidden sm:block bg-white shadow">
               <SubNavbar />
             </div>
-            <div className="bg-white shadow">
+            <div className="bg-white">
               <Navbar />
             </div>
           </div>

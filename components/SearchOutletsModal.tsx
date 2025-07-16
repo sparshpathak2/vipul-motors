@@ -7,12 +7,19 @@ interface SearchOutletsModalProps {
     isOpen: boolean;
     onClose: () => void;
     filters: Record<string, Record<string, number>>;
+    selectedFilter: { type: string; city: string } | null;
+    setSelectedFilter: React.Dispatch<React.SetStateAction<{
+        type: string;
+        city: string;
+    } | null>>;
 }
 
 export default function SearchOutletsModal({
     isOpen,
     onClose,
     filters,
+    selectedFilter,
+    setSelectedFilter,
 }: SearchOutletsModalProps) {
     // 🔒 Lock scroll on mount, unlock on unmount
     useEffect(() => {
@@ -51,20 +58,35 @@ export default function SearchOutletsModal({
                 <div className="p-4 overflow-y-auto h-[calc(100%-64px)]">
                     {/* You can tweak 64px if header is taller */}
                     <div className="flex flex-col gap-4">
+
                         {Object.entries(filters).map(([type, cities]) => (
                             <div key={type} className="flex flex-col gap-1">
-                                <div className="font-semibold">
-                                    {type}
-                                </div>
+                                <div className="font-semibold">{type}</div>
                                 <div className="flex flex-col gap-2 py-2 bg-white">
-                                    {Object.entries(cities).map(([city, count]) => (
-                                        <div key={city} className="text-blue-600 underline">
-                                            {city} ({count})
-                                        </div>
-                                    ))}
+                                    {Object.entries(cities).map(([city, count]) => {
+                                        const isSelected =
+                                            selectedFilter?.type === type && selectedFilter?.city === city;
+
+                                        return (
+                                            <button
+                                                key={city}
+                                                onClick={() => {
+                                                    setSelectedFilter({ type, city });
+                                                    onClose();
+                                                }}
+                                                className={`text-left underline ${isSelected
+                                                    ? "text-blue-600 font-bold"
+                                                    : "text-blue-600"
+                                                    }`}
+                                            >
+                                                {city} ({count})
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}
+
                     </div>
                 </div>
 
