@@ -5,7 +5,11 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+    //   fontFamily: {
+    //   sans: ["var(--font-rubik)", "sans-serif"],
+    // },
+    },
   },
   plugins: [],
 };

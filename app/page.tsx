@@ -23,11 +23,7 @@ export default function Home() {
   return (
     <div className="flex w-full flex-col">
       {/* <LocationPopup onConfirm={handleLocationConfirmed} /> */}
-      <LocationPopup />
-      <div className="hidden sm:block">
-        <SubNavbar />
-      </div>
-      <Navbar />
+      {/* <LocationPopup /> */}
       <HeroCarousel />
 
       {/* Service Types Desktop */}
@@ -51,7 +47,7 @@ export default function Home() {
               />
             </div>
             <div className="h-1/2 flex flex-col gap-2 text-center px-2">
-              <p className="text-white text-lg font-semibold">ARENA</p>
+              {/* <p className="text-white text-lg font-semibold">ARENA</p> */}
               <p className="text-white font-medium">Explore the 'World of Arena' built on experience, technology & design.</p>
             </div>
           </div>
@@ -76,7 +72,7 @@ export default function Home() {
               />
             </div>
             <div className="h-1/2 flex flex-col gap-2 text-center px-2">
-              <p className="text-white text-lg font-semibold">NEXA</p>
+              {/* <p className="text-white text-lg font-semibold">NEXA</p> */}
               <p className="text-white font-medium">Indulge in the premium experience of innovation & extraordinary creation that's created to inspire.</p>
             </div>
           </div>
@@ -101,7 +97,7 @@ export default function Home() {
               />
             </div>
             <div className="h-1/2 flex flex-col gap-2 text-center px-2">
-              <p className="text-white text-lg font-semibold">COMMERCIAL</p>
+              {/* <p className="text-white text-lg font-semibold">COMMERCIAL</p> */}
               <p className="text-white font-medium">Explore the 'World of Arena' built on experience, technology & design.</p>
             </div>
           </div>
@@ -126,7 +122,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col gap-2 text-center px-2">
-              <p className="text-white text-lg font-semibold">TRUE VALUE</p>
+              {/* <p className="text-white text-lg font-semibold">TRUE VALUE</p> */}
               <p className="text-white font-medium">Leading destination for pre-owned cars.</p>
             </div>
           </div>

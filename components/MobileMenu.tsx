@@ -98,6 +98,13 @@ const MobileMenu = () => {
                             Service
                         </Link>
                         <Link
+                            href="/outlets"
+                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            onClick={() => setOpen(false)}
+                        >
+                            Outlets
+                        </Link>
+                        <Link
                             href="/"
                             className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
                             onClick={() => setOpen(false)}

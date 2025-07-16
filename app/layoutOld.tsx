@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SubNavbar from "@/components/SubNavbar";
 
-const rubik = Rubik({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  variable: "--font-rubik",
-  weight: ["400", "500", "600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -17,15 +21,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} font-sans antialiased`}>
-        {/* <body className={`${rubik.className} font-sans antialiased`}> */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* {children} */}
+
+        {/* <div className="w-full flex flex-col">
+          <div className="hidden sm:block">
+            <SubNavbar />
+          </div>
+          <Navbar />
+          {children}
+        </div> */}
 
         <div className="w-full flex flex-col">
+          {/* Fixed Navbar Container */}
           <div className="fixed top-0 left-0 w-full z-50">
             <div className="hidden sm:block bg-white shadow">
               <SubNavbar />
@@ -34,8 +49,13 @@ export default function RootLayout({
               <Navbar />
             </div>
           </div>
-          <main className="pt-[72px] sm:pt-[108px]">{children}</main>
+
+          {/* Content - add padding top to prevent nav overlap */}
+          <main className="pt-[112px] sm:pt-[108px]">
+            {children}
+          </main>
         </div>
+
       </body>
     </html>
   );

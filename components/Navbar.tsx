@@ -8,21 +8,20 @@ export default function Navbar() {
             {/* <div>
                 Navbar
             </div> */}
-            <div className='flex items-center gap-2'>
-                <a href='/'>
-                    <Image
-                        width={64}
-                        height={64}
-                        alt='Vipul Motors Logo'
-                        // className='h-10'
-                        // className='h-full w-full'
-                        className='h-12 w-12 sm:w-full sm:h-full'
-                        // src='/Logo-5.svg'
-                        src='/Vipul-Motors-Logo.png'
-                    />
-                </a>
-                <div className='text-[16px] sm:text-[20px] italic font-bold text-blue-900'>VIPUL MOTORS</div>
-            </div>
+            {/* <div className='flex items-center gap-2'> */}
+            <a href='/'>
+                <Image
+                    width={64}
+                    height={64}
+                    alt='Vipul Motors Logo'
+                    // className='h-10'
+                    // className='h-full w-full'
+                    className='h-16 w-16'
+                    // src='/Vipul-Motors-Logo-1.svg'
+                    src='/Vipul-Motors-Logo-2.svg'
+                />
+            </a>
+            {/* </div> */}
 
             {/* Desktop Menu */}
             <div className='hidden lg:flex gap-8 h-full items-center'>
@@ -75,6 +74,13 @@ export default function Navbar() {
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
                 >
                     Service
+                </a>
+
+                <a
+                    href="/outlets"
+                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
+                >
+                    Outlets
                 </a>
 
                 <a

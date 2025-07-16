@@ -1,0 +1,347 @@
+'use client'
+
+import React, { useState } from 'react'
+import { outlets } from "@/lib/data";
+import { Clock, Mail, MapPin, Phone, Search } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import SearchOutletsModal from '@/components/SearchOutletsModal';
+import FormModal from '@/components/FormModal';
+
+export default function page() {
+    const [searchOutletsModal, setSearchOutletsModal] = useState(false)
+    const [isFormOpen, setIsFormOpen] = useState(false);
+
+    const filters = outlets.reduce((acc, curr) => {
+        const { type, city } = curr;
+
+        if (!acc[type]) {
+            acc[type] = {};
+        }
+
+        if (!acc[type][city]) {
+            acc[type][city] = 1;
+        } else {
+            acc[type][city]++;
+        }
+
+        return acc;
+    }, {} as Record<string, Record<string, number>>);
+
+    return (
+        <>
+            <div>
+                {/* <div className='flex flex-col w-full bg-gray-800 items-center gap-2 py-4'>
+                <div className='text-white text-2xl'>Outlets</div>
+                <div className='flex text-white gap-2 items-center'>
+                    <Home size={16} />
+                    <div>/</div>
+                    <div>Outlets</div>
+                </div>
+            </div> */}
+                <div className='flex flex-col w-full border-b-1 bg-white border-gray-200 items-center gap-2 py-4'>
+                    <div className='text-xl sm:text-2xl font-semibold'>Outlets</div>
+                    <div className='flex gap-2 items-center'>
+                        <a href="/">
+                            {/* <Home className='w-[14px] sm:w-[16px] h-auto text-blue-600 hover:text-blue-800 cursor-pointer' /> */}
+                            <div className='text-sm text-blue-600 hover:text-blue-800'>Home</div>
+                        </a>
+                        <div className='text-sm'>/</div>
+                        <div className='text-sm'>Outlets</div>
+                    </div>
+                </div>
+
+                <div className='flex px-2 sm:px-16 py-4 w-full sm:w-[80%] mx-auto bg-[#FAFAFA] gap-6'>
+
+                    {/* Left filters Desktop */}
+                    <div className='hidden sm:flex flex-col w-1/4 gap-4'>
+                        <div className='text-gray-700 font-semibold'>Filter by Cities</div>
+                        <div className='flex flex-col gap-6'>
+                            {Object.entries(filters).map(([type, cities]) => (
+                                <div key={type} className="flex flex-col gap-1">
+                                    <div className="font-semibold bg-blue-600 px-2 py-1 text-white">{type}</div>
+                                    <div className='flex flex-col gap-2 py-2 px-3 bg-white'>
+                                        {Object.entries(cities).map(([city, count]) => (
+                                            <div key={city} className='text-blue-600 underline'>
+                                                {city} ({count})
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right list Desktop */}
+                    <div className='hidden sm:flex w-3/4 flex-col gap-4 bg-white p-6'>
+                        <div className='flex w-full justify-end'>
+                            <span className='font-semibold mr-1'>{outlets.length}</span>
+                            results
+                        </div>
+                        {outlets.map((outlet, index) => (
+                            // Card 1 Desktop
+                            // <div key={index} className="flex justify-between w-full bg-white p-3 border-1 border-gray-100 rounded-md shadow-md">
+                            //     <div className='flex flex-col gap-2 w-full'>
+                            //         <div className='flex w-full justify-between items-center'>
+                            //             <h3 className="text-xl font-semibold">{outlet.title}</h3>
+                            //             {/* <div className='boder-1 bordder'>{outlet.type}</div> */}
+                            //             {/* <Badge className=''>{outlet.type}</Badge> */}
+                            //         </div>
+                            //         {/* <Badge className='rounded-full text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge> */}
+
+                            //         {/* <p className="text-sm text-gray-600">{outlet.type}</p> */}
+
+                            //         <div className='flex flex-col gap-2'>
+                            //             <p>{outlet.address}</p>
+                            //             <div className='flex flex-col'>
+                            //                 <div className='flex gap-2 items-center'>
+                            //                     <Clock size={16} />
+                            //                     <p>{outlet.workingHours}</p>
+                            //                 </div>
+                            //                 <div className='flex gap-2 items-center'>
+                            //                     <Phone size={16} />
+                            //                     <p className='underline font-semibold'>{outlet.contactNo}</p>
+                            //                 </div>
+                            //                 <div className='flex gap-2 items-center'>
+                            //                     <Mail size={16} />
+                            //                     <p className='underline font-semibold'>{outlet.email}</p>
+                            //                 </div>
+                            //             </div>
+                            //         </div>
+                            //     </div>
+                            //     <div className='flex flex-col justify-between'>
+                            //         <Badge className='rounded-full w-full text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge>
+                            //         <div className='flex flex-col gap-2'>
+                            //             <Button className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'>
+                            //                 {/* <Button className='flex gap-2 bg-[#4263EB] hover:bg-blue-500 font-semibold'> */}
+                            //                 {/* <Button className='flex gap-2 bg-blue-600 hover:bg-blue-500 font-semibold'> */}
+                            //                 <MapPin size={16} />
+                            //                 Locate on Map
+                            //             </Button>
+                            //             <Button className='font-semibold bg-blue-700 hover:bg-blue-600'>Request for Callback</Button>
+                            //         </div>
+                            //     </div>
+                            // </div>
+
+                            // Card 2 Desktop
+                            // <div key={index} className="flex flex-col w-full gap-4 bg-white p-3 border-1 border-gray-100 rounded-md shadow-md">
+                            //     <div className='flex flex-col gap-2 w-full'>
+                            //         <div className='flex w-full justify-between items-center'>
+                            //             <h3 className="text-xl font-semibold">{outlet.title}</h3>
+                            //         </div>
+                            //         <Badge className='rounded-full text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge>
+
+                            //         <div className='flex flex-col gap-2'>
+                            //             <p>{outlet.address}</p>
+                            //             <div className='flex flex-col'>
+                            //                 <div className='flex gap-2 items-center'>
+                            //                     <Clock size={16} />
+                            //                     <p>{outlet.workingHours}</p>
+                            //                 </div>
+                            //                 <div className='flex gap-2 items-center'>
+                            //                     <Phone size={16} />
+                            //                     <p className='underline font-semibold'>{outlet.contactNo}</p>
+                            //                 </div>
+                            //                 <div className='flex gap-2 items-center'>
+                            //                     <Mail size={16} />
+                            //                     <p className='underline font-semibold'>{outlet.email}</p>
+                            //                 </div>
+                            //             </div>
+                            //         </div>
+                            //     </div>
+                            //     <div className='flex w-full justify-end gap-2'>
+                            //         <Button className='font-semibold w-fit'>Request for Callback</Button>
+                            //         <Button className='flex gap-2 w-fit bg-blue-700 hover:bg-blue-600 font-semibold'>
+                            //             <MapPin size={16} />
+                            //             Locate on Map
+                            //         </Button>
+                            //     </div>
+                            // </div>
+
+                            // Card 3 Desktop
+                            <div key={index} className="flex justify-between w-full bg-white border-1 border-gray-100 rounded-md shadow-md">
+                                <div className='flex flex-col gap-2 w-full p-3'>
+
+                                    <div className='flex w-full justify-between items-center'>
+                                        <h3 className="text-xl font-semibold">{outlet.title}</h3>
+                                    </div>
+
+                                    <div className='flex flex-col gap-4'>
+                                        <p>{outlet.address}</p>
+                                        <div className='flex flex-col gap-0.5'>
+                                            <div className='flex gap-2 items-center'>
+                                                <Clock size={16} />
+                                                <p>{outlet.workingHours}</p>
+                                            </div>
+                                            <div className='flex gap-2 items-center'>
+                                                <Phone size={16} />
+                                                <p className='underline font-semibold'>{outlet.contactNo}</p>
+                                            </div>
+                                            <div className='flex gap-2 items-center'>
+                                                <Mail size={16} />
+                                                {/* <p className='text-blue-600 underline font-semibold'>{outlet.email}</p> */}
+                                                <p
+                                                    className="text-blue-600 underline font-semibold cursor-pointer"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        navigator.clipboard.writeText(outlet.email);
+                                                    }}
+                                                >
+                                                    <a href={`mailto:${outlet.email}`} className="block">
+                                                        {outlet.email}
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='flex flex-col justify-between border-l-1 border-gray-200 p-3'>
+                                    <div className='flex flex-col gap-1'>
+                                        <p className='text-sm'>Outlet type</p>
+                                        <p className='font-semibold'>{outlet.type}</p>
+                                        {/* <Badge className='rounded-full w-full text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge> */}
+                                    </div>
+                                    <div className='flex flex-col gap-2'>
+                                        <Button
+                                            // className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'
+                                            className='flex gap-2 font-semibold border-1' variant='outline'
+                                        >
+                                            <MapPin size={16} />
+                                            Locate on Map
+                                        </Button>
+                                        <Button
+                                            onClick={() => setIsFormOpen(true)}
+                                            className='font-semibold'
+                                        >
+                                            Request for Callback
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        ))}
+                    </div>
+
+                    {/* Right list Mobile */}
+                    <div className='flex sm:hidden flex-col w-full gap-4 bg-white p-3 sm:p-6'>
+
+                        <div className='flex w-full justify-between items-center gap-6'>
+                            <div
+                                className='flex w-full gap-2 items-center border-1 border-gray-400 px-2 py-1 rounded-sm'
+                                onClick={() => setSearchOutletsModal(true)}
+                            >
+                                <Search size={16} />
+                                <div>Filter outlet</div>
+                            </div>
+                            <div>
+                                <span className='font-semibold mr-1'>{outlets.length}</span>
+                                results
+                            </div>
+                        </div>
+
+                        {outlets.map((outlet, index) => (
+
+                            // Card 1 Mobile
+                            <div key={index} className="flex flex-col w-full bg-white border-1 border-gray-100 rounded-md shadow-md">
+                                <div className='flex flex-col gap-2 w-full p-3'>
+
+                                    <div className='flex flex-col w-full'>
+                                        <h3 className="text-xl font-semibold">{outlet.title}</h3>
+                                        {/* <div className='flex flex-col gap-1'>
+                                    <p className='text-sm'>Outlet type</p>
+                                    <p className='font-semibold'>{outlet.type}</p>
+                                    <Badge className='rounded-full w-fit text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge>
+                                </div> */}
+                                    </div>
+
+                                    <div className='flex flex-col gap-4'>
+                                        <div className='flex flex-col gap-1'>
+                                            {/* <p className='text-sm'>Outlet type</p> */}
+                                            {/* <p className='font-semibold'>{outlet.type}</p> */}
+                                            <Badge className='rounded-full w-fit text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge>
+                                        </div>
+                                        <p>{outlet.address}</p>
+                                        <div className='flex flex-col gap-0.5'>
+                                            <div className='flex gap-2 items-center'>
+                                                <Clock size={16} />
+                                                <p>{outlet.workingHours}</p>
+                                            </div>
+                                            <div className='flex gap-2 items-center'>
+                                                <Phone size={16} />
+                                                {/* <p className='text-blue-600 underline font-semibold'>{outlet.contactNo}</p> */}
+                                                <p
+                                                    className="text-blue-600 underline font-semibold cursor-pointer"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        navigator.clipboard.writeText(outlet.contactNo);
+                                                    }}
+                                                >
+                                                    <a href={`tel:${outlet.contactNo}`} className="block">
+                                                        {outlet.contactNo}
+                                                    </a>
+                                                </p>
+
+                                            </div>
+                                            <div className='flex gap-2 items-center'>
+                                                <Mail size={16} />
+                                                {/* <p className='text-blue-600 underline font-semibold'>{outlet.email}</p> */}
+                                                <p
+                                                    className="text-blue-600 underline font-semibold cursor-pointer"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        navigator.clipboard.writeText(outlet.email);
+                                                    }}
+                                                >
+                                                    <a href={`mailto:${outlet.email}`} className="block">
+                                                        {outlet.email}
+                                                    </a>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='flex flex-col justify-between border-l-1 border-gray-200 p-3'>
+                                    {/* <div className='flex flex-col gap-1'>
+                                <p className='text-sm'>Outlet type</p>
+                                <p className='font-semibold'>{outlet.type}</p>
+                                <Badge className='rounded-full w-fit text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge>
+                            </div> */}
+                                    <div className='flex flex-col gap-2'>
+                                        <Button
+                                            // className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'
+                                            className='flex gap-2 font-semibold border-1' variant='outline'
+                                        >
+                                            {/* <Button className='flex gap-2 bg-[#4263EB] hover:bg-blue-500 font-semibold'> */}
+                                            {/* <Button className='flex gap-2 bg-blue-600 hover:bg-blue-500 font-semibold'> */}
+                                            <MapPin size={16} />
+                                            Locate on Map
+                                        </Button>
+                                        <Button
+                                            onClick={() => setIsFormOpen(true)}
+                                            className='font-semibold'>
+                                            Request for Callback
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+
+            <FormModal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+
+            <SearchOutletsModal
+                isOpen={searchOutletsModal}
+                onClose={() => setSearchOutletsModal(false)}
+                filters={filters}
+            />
+
+        </>
+    )
+}
