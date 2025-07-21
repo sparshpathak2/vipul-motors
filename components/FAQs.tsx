@@ -114,7 +114,7 @@ export default function FAQs() {
             </div>
 
             {/* Mobile */}
-            <div className="sm:hidden flex flex-col gap-2 w-full px-4">
+            <div className="sm:hidden flex flex-col gap-2 w-full">
                 <div className="flex space-x-4 overflow-x-auto pb-4">
                     {categories.map((category) => (
                         <button
@@ -124,7 +124,7 @@ export default function FAQs() {
                                 setActiveIndex(null); // Reset open FAQ
                             }}
                             className={`whitespace-nowrap px-4 py-2 ${selectedCategory === category
-                                ? "text-blue-600 font-semibold border-b-1 border-b-blue-600"
+                                ? "text-blue-600 font-semibold border-b-2 border-b-blue-600"
                                 : "text-gray-700 border-gray-300"
                                 } transition-all duration-200`}
                         >

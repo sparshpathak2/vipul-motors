@@ -305,7 +305,7 @@ export default function Home() {
       </div>
 
       {/* Models Section */}
-      <div className="flex flex-col w-full px-4 py-8 sm:px-16 sm:py-24 gap-6 sm:gap-12">
+      <div className="flex flex-col w-full px-4 py-12 sm:px-16 sm:py-24 gap-6 sm:gap-12">
 
         <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
           <div className="flex flex-col gap-2">
@@ -504,7 +504,7 @@ export default function Home() {
       </div>
 
       {/* FAQs Section */}
-      <div className="flex flex-col w-full text-center py-12 sm:py-24 gap-8">
+      <div className="flex flex-col w-full text-center px-4 sm:px-16 py-12 sm:py-24 gap-8">
         <div className="flex flex-col gap-2 items-center justify-center">
           <h2 className="text-3xl font-semibold">Frequently Asked Questions</h2>
           <div>We promise you the best of our service.</div>
