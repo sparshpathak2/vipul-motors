@@ -202,7 +202,7 @@ export default function page() {
                     </div>
 
                     {/* Right list Mobile */}
-                    <div className='flex sm:hidden flex-col w-full gap-4 bg-white p-3 sm:p-6'>
+                    <div className='flex sm:hidden flex-col w-full gap-4 sm:bg-white p-3 sm:p-6'>
 
                         <div className='flex w-full justify-between items-center'>
 

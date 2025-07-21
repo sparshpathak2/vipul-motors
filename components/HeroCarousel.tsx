@@ -3,8 +3,9 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const desktopImages = ["/c-1.webp", "/c-2.webp", "/c-3.webp"];
-const mobileImages = ["/c-4m.webp", "/c-4m.webp", "/c-4m.webp"];
+// const desktopImages = ["/banner-1.jpeg", "/c-1.webp", "/c-2.webp", "/c-3.webp"];
+const desktopImages = ["/cd-2.jpg", "/cd-3.jpg", "/cd-4.jpg", "/cd-1.jpg"];
+const mobileImages = ["/cm-2.jpg", "/cm-3.jpg", "/cm-4.jpg", "/cm-1.jpg"];
 
 export default function HeroCarousel() {
     const [current, setCurrent] = useState(0);

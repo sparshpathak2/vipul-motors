@@ -60,7 +60,7 @@ export const outlets = [
     workingHours: "9:30 AM - 8:00 PM",
     contactNo: "+91 9990057744",
     email: "digitalmanager@vipulmotors.com",
-    city: "Lucknow",
+    city: "New Delhi",
   },
   {
     title: "ARENA Vipul Motors,Shyam Nagar",
