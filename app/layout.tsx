@@ -23,10 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable} font-sans antialiased`}>
-        {/* <body className={`${rubik.className} font-sans antialiased`}> */}
 
-        <div className="w-full flex flex-col">
+      <body className={`${rubik.variable} font-sans antialiased min-h-screen flex flex-col`}>
+        {/* <body className={`${rubik.className} font-sans antialiased min-h-screen flex flex-col`}> */}
+        <div className="flex flex-col flex-grow w-full">
           <div className="fixed top-0 left-0 w-full z-50">
             <div className="hidden sm:block bg-white shadow">
               <SubNavbar />
@@ -35,12 +35,17 @@ export default function RootLayout({
               <Navbar />
             </div>
           </div>
-          <main className="pt-[72px] sm:pt-[108px]">{children}</main>
-          <div className="w-full">
-            <Footer />
-          </div>
+
+          {/* Pushes content below fixed navbar */}
+          <main className="pt-[72px] sm:pt-[108px] flex-grow">
+            {children}
+          </main>
+
+          {/* Footer stays at the bottom */}
+          <Footer />
         </div>
       </body>
+
     </html >
   );
 }
