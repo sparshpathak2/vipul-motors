@@ -25,7 +25,7 @@ const faqData: FAQCategory = {
                 "You will receive an email with tracking information once your order is shipped.",
         },
     ],
-    General: [
+    "General": [
         {
             question: "Do you offer customer support?",
             answer: "Yes, our support team is available 24/7 via chat and email.",

@@ -7,11 +7,11 @@ export default function SubNavbar() {
             <div className='flex gap-4 h-full'>
                 <div className='flex gap-2 items-center'>
                     <Phone size={14} className='text-blue-700' />
-                    <div className='text-sm'>+91 9876543210</div>
+                    <div className='text-sm'>+91 9990057744</div>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <Mail size={14} className='text-blue-700' />
-                    <div className='text-sm'>vipul@vipulmotors.com</div>
+                    <div className='text-sm'>contactus@vipulmotors.com</div>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <Clock size={14} className='text-blue-700' />

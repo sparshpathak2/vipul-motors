@@ -42,19 +42,19 @@ export default function Navbar() {
                     </a>
                     <div className="absolute left-0 top-full mt-0 hidden bg-white border border-gray-200 shadow-md group-hover:block z-50 min-w-max">
                         <a
-                            href="/corporate/fleet"
+                            href="/models?outlet=arena"
                             className="block px-4 py-2 hover:bg-gray-100 text-sm"
                         >
                             Arena
                         </a>
                         <a
-                            href="/corporate/lease"
+                            href="/models?outlet=nexa"
                             className="block px-4 py-2 hover:bg-gray-100 text-sm"
                         >
                             Nexa
                         </a>
                         <a
-                            href="/corporate/lease"
+                            href="/models?outlet=commercial"
                             className="block px-4 py-2 hover:bg-gray-100 text-sm"
                         >
                             Commercial
@@ -63,14 +63,14 @@ export default function Navbar() {
                 </div>
 
                 <a
-                    href="/"
+                    href="/pre-owned"
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
                 >
                     Pre Owned
                 </a>
 
                 <a
-                    href="/"
+                    href="/service"
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
                 >
                     Service
@@ -84,24 +84,31 @@ export default function Navbar() {
                 </a>
 
                 <a
-                    href="/"
+                    href="/driving-school"
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
                 >
                     Driving School
                 </a>
 
                 <a
-                    href="/"
+                    href="/car-loan"
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
                 >
                     Car Loan
                 </a>
 
                 <a
-                    href="/"
+                    href="/insurance"
                     className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
                 >
                     Insurance
+                </a>
+
+                <a
+                    href="/contact-us"
+                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
+                >
+                    Contact Us
                 </a>
 
                 {/* <a
@@ -111,7 +118,7 @@ export default function Navbar() {
                     Corporate
                 </a> */}
 
-                <div className="relative group h-full">
+                {/* <div className="relative group h-full">
                     <a
                         href="#"
                         className="flex h-full items-center border-b-2 border-transparent"
@@ -132,7 +139,7 @@ export default function Navbar() {
                             About Us
                         </a>
                     </div>
-                </div>
+                </div> */}
 
             </div>
 

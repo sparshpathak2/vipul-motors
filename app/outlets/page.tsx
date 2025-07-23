@@ -137,7 +137,7 @@ export default function page() {
                                 .map((outlet, index) => (
 
                                     // Card 3 Desktop
-                                    <div key={index} className="flex justify-between w-full bg-white border-1 border-gray-100 shadow-md">
+                                    <div key={index} className="flex justify-between w-full bg-white border-1 border-gray-200 shadow-md">
                                         <div className='flex flex-col gap-2 w-full p-3'>
 
                                             <div className='flex w-full justify-between items-center'>

@@ -132,7 +132,10 @@ export default function Home() {
         </div>
 
         {/* 2 */}
-        <div className="relative flex flex-col row-span-2 row-start-3 sm:col-span-2 sm:row-span-2 sm:col-start-5 cursor-pointer group overflow-hidden bg-slate-300 p-4">
+        <a
+          href="/service"
+          className="relative flex flex-col row-span-2 row-start-3 sm:col-span-2 sm:row-span-2 sm:col-start-5 cursor-pointer group overflow-hidden bg-slate-300 p-4"
+        >
           {/* Content */}
           <div className="z-10 text-black flex flex-col justify-between h-full">
             <div className="flex flex-col gap-2">
@@ -145,10 +148,13 @@ export default function Home() {
               <ArrowUpRight size={32} className="transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </div>
           </div>
-        </div>
+        </a>
 
         {/* 3 */}
-        <div className="relative flex flex-col row-span-2 row-start-3 sm:col-span-2 sm:row-span-2 sm:col-start-7 cursor-pointer group overflow-hidden bg-black p-4">
+        <a
+          href="/roadside-assistance"
+          className="relative flex flex-col row-span-2 row-start-3 sm:col-span-2 sm:row-span-2 sm:col-start-7 cursor-pointer group overflow-hidden bg-black p-4"
+        >
           {/* Content */}
           <div className="z-10 flex flex-col justify-between h-full text-white">
             <div className="flex flex-col gap-2">
@@ -161,11 +167,14 @@ export default function Home() {
               <ArrowUpRight size={32} className="transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </div>
           </div>
-        </div>
+        </a>
 
         {/* 4 */}
         {/* <div className="relative col-span-2 row-span-2 row-start-5 sm:row-span-2 sm:row-start-3 sm:col-start-5 bg-slate-200 group cursor-pointer overflow-hidden"> */}
-        <div className="relative col-span-2 row-span-2 row-start-5 sm:col-span-4 sm:row-span-2 sm:col-start-5 sm:row-start-3 bg-slate-200 group cursor-pointer overflow-hidden">
+        <a
+          href="/book-test-drive"
+          className="relative col-span-2 row-span-2 row-start-5 sm:col-span-4 sm:row-span-2 sm:col-start-5 sm:row-start-3 bg-slate-200 group cursor-pointer overflow-hidden"
+        >
 
           {/* Background Image */}
           <div className="absolute inset-0 bg-[url('/test-drive-1.jpg')] bg-cover bg-center z-0" />
@@ -191,7 +200,7 @@ export default function Home() {
               <ArrowUpRight size={32} className="transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </div>
           </div>
-        </div>
+        </a>
 
       </div>
 
@@ -253,7 +262,7 @@ export default function Home() {
           {/* <hr className="my-6 border-t border-red-600 w-24" /> */}
           <div className="flex flex-col gap-4 w-full">
             <div className="flex flex-col gap-2">
-              <h2 className="text-3xl font-semibold">Welcome to Vipul Maruti!</h2>
+              <h2 className="text-3xl font-semibold">Welcome to <span className="text-blue-600">Vipul Motors!</span></h2>
               <div className="font-semibold">DRIVEN BY TRUST. DEFINED  BY EXCELLENCE.</div>
             </div>
             {/* <div className="text-gray-600 sm:pr-20">At Vipul, we believe that our relationship doesn’t end with getting you a new car. Its just the beginning of a long relationship which will need constant support and quality experience.</div> */}
@@ -267,7 +276,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <div className="text-lg font-semibold">50 Lakhs+ Happy Customers</div>
-                <div>Serving 1000s of customers across multiple states</div>
+                <div>Trusted by over 50 lakh satisfied customers across the country.</div>
               </div>
             </div>
             <div className="flex gap-4">
@@ -276,7 +285,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <div className="text-lg font-semibold">16 Arena Showrooms</div>
-                <div>Serving 1000s of customers across multiple states</div>
+                <div>Widespread presence with 16 Arena showrooms to serve you better.</div>
               </div>
             </div>
             <div className="flex gap-4">
@@ -285,7 +294,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <div className="text-lg font-semibold">8 Nexa Showrooms</div>
-                <div>Serving 1000s of customers across multiple states</div>
+                <div>Experience premium car buying at our 8 exclusive NEXA showrooms.</div>
               </div>
             </div>
             <div className="flex gap-4">
@@ -294,7 +303,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <div className="text-lg font-semibold">19 Workshops</div>
-                <div>Serving 1000s of customers across multiple states</div>
+                <div>Get expert care and service at our 19 authorized workshops.</div>
               </div>
             </div>
 
@@ -313,10 +322,10 @@ export default function Home() {
             <div>Lorem ipsum dolor sit amet consectetur. In amet risus mi risus habitant porttitor tincidunt.</div>
           </div>
 
-          <Button className="flex gap-2 w-fit">
-            Explore All
-            <ArrowUpRight size={20} />
-          </Button>
+          <a href="/models" className="group flex gap-2 items-center border-1 bg-blue-600 hover:bg-blue-800 text-white w-fit h-fit px-4 py-3">
+            <div className="text-sm">Explore All</div>
+            <ArrowUpRight size={20} className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </a>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-4 grid-rows-1 gap-4">
@@ -526,24 +535,15 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-semibold">Locate Your Nearest Showroom</h2>
               {/* <div>Lorem ipsum dolor sit amet consectetur.</div> */}
             </div>
-            <div className="flex gap-2 items-center border-1 border-white w-fit py-2 px-3">
+            <a href="/outlets" className="group flex gap-2 items-center border-1 border-white w-fit py-3 px-4">
               <div className="text-sm">Explore Showrooms</div>
-              <ArrowUpRight size={20} />
-            </div>
+              <ArrowUpRight size={20} className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
           </div>
 
           <hr className="hidden sm:block w-full border-t border-white" />
 
           <div className="flex flex-col sm:flex-row w-full gap-4">
-
-            <div className="w-full sm:w-2/3 h-full">
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=17dg3RG3JrKjc78v_6N-sae2HGQpOScs&ehbc=2E312F&noprof=1"
-                className="w-full h-[300px] sm:h-full border-0"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
-            </div>
 
             <div className="w-full sm:w-1/3 flex flex-col gap-4">
 
@@ -638,12 +638,22 @@ export default function Home() {
               </a>
 
             </div>
+
+            <div className="w-full sm:w-2/3 h-full">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=17dg3RG3JrKjc78v_6N-sae2HGQpOScs&ehbc=2E312F&noprof=1"
+                className="w-full h-[300px] sm:h-full border-0"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            </div>
+
           </div>
 
         </div>
       </div>
 
 
-    </div>
+    </div >
   );
 }

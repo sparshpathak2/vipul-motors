@@ -325,6 +325,194 @@ export const outlets = [
   },
 ];
 
+export type Car = {
+  name: string;
+  image: string;       // relative URL, adjust paths to /public/images/
+  category: "Arena" | "Nexa" | "Commercial";
+  displacement: number;    // in cc
+  fuelEfficiency: number;  // in kmpl
+  power: number;           // in bhp
+  getPriceListCta: string;
+  getBrochureCta: string;
+};
+
+export const models: Car[] = [
+  // ARENA (mass-market)
+  {
+    name: "Alto K10",
+    image: "/images/alto-k10.jpg",
+    category: "Arena",
+    displacement: 998,
+    fuelEfficiency: 24.9,
+    power: 65.7,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "S‑Presso",
+    image: "/images/spresso.jpg",
+    category: "Arena",
+    displacement: 998,
+    fuelEfficiency: 24.76,
+    power: 67,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Celerio",
+    image: "/images/celerio.jpg",
+    category: "Arena",
+    displacement: 998,
+    fuelEfficiency: 25.24,
+    power: 65.7,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Wagon R",
+    image: "/images/wagon-r.jpg",
+    category: "Arena",
+    displacement: 1197,
+    fuelEfficiency: 24.35,
+    power: 82,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Swift",
+    image: "/images/swift.jpg",
+    category: "Arena",
+    displacement: 1197,
+    fuelEfficiency: 24.8,
+    power: 80.5,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Brezza",
+    image: "/images/brezza.jpg",
+    category: "Arena",
+    displacement: 1462,
+    fuelEfficiency: 17.8,
+    power: 101,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Eeco",
+    image: "/images/eeco.jpg",
+    category: "Arena",
+    displacement: 1197,
+    fuelEfficiency: 16.11,
+    power: 79.7,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Erti­­ga",
+    image: "/images/ertiga.jpg",
+    category: "Arena",
+    displacement: 1462,
+    fuelEfficiency: 20.51,
+    power: 101.6,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Alto Tour (commercial)",
+    image: "/images/alto-tour.jpg",
+    category: "Arena",
+    displacement: 998,
+    fuelEfficiency: 24.39,
+    power: 67.6,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+
+  // NEXA (premium)
+  {
+    name: "Ignis",
+    image: "/images/ignis.jpg",
+    category: "Nexa",
+    displacement: 1197,
+    fuelEfficiency: 20.89,
+    power: 81.8,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Baleno",
+    image: "/images/baleno.jpg",
+    category: "Nexa",
+    displacement: 1197,
+    fuelEfficiency: 22.35,
+    power: 88.5,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Fronx",
+    image: "/images/fronx.jpg",
+    category: "Nexa",
+    displacement: 1197,
+    fuelEfficiency: 22.89,
+    power: 98.7,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Grand Vitara",
+    image: "/images/grand-vitara.jpg",
+    category: "Nexa",
+    displacement: 1490,
+    fuelEfficiency: 27.97,
+    power: 101.6,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Jimny",
+    image: "/images/jimny.jpg",
+    category: "Nexa",
+    displacement: 1462,
+    fuelEfficiency: 16.94,
+    power: 103,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "XL6",
+    image: "/images/xl6.jpg",
+    category: "Nexa",
+    displacement: 1462,
+    fuelEfficiency: 20.97,
+    power: 101.6,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+  {
+    name: "Invicto",
+    image: "/images/invicto.jpg",
+    category: "Nexa",
+    displacement: 1987,
+    fuelEfficiency: 23.24,
+    power: 150.2,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+
+  // Commercial
+  {
+    name: "Super Carry",
+    image: "/images/super-carry.jpg",
+    category: "Commercial",
+    displacement: 1298,  // typical small diesel/petrol engine
+    fuelEfficiency: 18,
+    power: 62,
+    getPriceListCta: "#",
+    getBrochureCta: "#",
+  },
+];
 
 export const marutiSuzukiModels = [
   "Alto K10",

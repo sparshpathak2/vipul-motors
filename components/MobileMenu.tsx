@@ -59,21 +59,21 @@ const MobileMenu = () => {
                             {newCarsOpen && (
                                 <div className="bg-gray-50">
                                     <Link
-                                        href="/"
+                                        href="/models?outlet=arena"
                                         className="block pl-6 py-2 border-y border-gray-200 hover:bg-gray-100"
                                         onClick={() => setOpen(false)}
                                     >
                                         Arena
                                     </Link>
                                     <Link
-                                        href="/"
+                                        href="/models?outlet=nexa"
                                         className="block pl-6 py-2 border-b border-gray-200 hover:bg-gray-100"
                                         onClick={() => setOpen(false)}
                                     >
                                         Nexa
                                     </Link>
                                     <Link
-                                        href="/"
+                                        href="/models?outlet=commercial"
                                         className="block pl-6 py-2"
                                         onClick={() => setOpen(false)}
                                     >
@@ -84,14 +84,14 @@ const MobileMenu = () => {
                         </div>
 
                         <Link
-                            href="/"
+                            href="/pre-owned"
                             className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
                             onClick={() => setOpen(false)}
                         >
                             Pre Owned
                         </Link>
                         <Link
-                            href="/"
+                            href="/service"
                             className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
                             onClick={() => setOpen(false)}
                         >
@@ -105,28 +105,35 @@ const MobileMenu = () => {
                             Outlets
                         </Link>
                         <Link
-                            href="/"
+                            href="/driving-school"
                             className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
                             onClick={() => setOpen(false)}
                         >
                             Driving School
                         </Link>
                         <Link
-                            href="/"
+                            href="/car-loan"
                             className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
                             onClick={() => setOpen(false)}
                         >
                             Car Loan
                         </Link>
                         <Link
-                            href="/"
+                            href="/insurance"
                             className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
                             onClick={() => setOpen(false)}
                         >
                             Insurance
                         </Link>
+                        <Link
+                            href="/contact-us"
+                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            onClick={() => setOpen(false)}
+                        >
+                            Contact Us
+                        </Link>
 
-                        <div className="border-b border-gray-200">
+                        {/* <div className="border-b border-gray-200">
                             <button
                                 onClick={() => setCorporateOpen(!corporateOpen)}
                                 className="w-full text-left px-4 py-3 hover:bg-gray-100 flex justify-between items-center"
@@ -141,7 +148,7 @@ const MobileMenu = () => {
                             {corporateOpen && (
                                 <div className="bg-gray-50">
                                     <Link
-                                        href="/"
+                                        href="/contact-us"
                                         className="block pl-6 py-2 border-y border-gray-200 hover:bg-gray-100"
                                         onClick={() => setOpen(false)}
                                     >
@@ -156,7 +163,7 @@ const MobileMenu = () => {
                                     </Link>
                                 </div>
                             )}
-                        </div>
+                        </div> */}
                     </div>
 
                     <div>
@@ -164,11 +171,11 @@ const MobileMenu = () => {
                             <div className='italic'>CONTACT DETAILS</div>
                             <div className='flex gap-2 items-center'>
                                 <Phone size={16} className='text-blue-700' />
-                                <div>+91 9876543210</div>
+                                <div>+91 99900 57744</div>
                             </div>
                             <div className='flex gap-2 items-center'>
                                 <Mail size={16} className='text-blue-700' />
-                                <div>vipul@vipulmotors.com</div>
+                                <div>contactus@vipulmotors.com</div>
                             </div>
                             <div className='flex gap-2 items-center'>
                                 <Clock size={16} className='text-blue-700' />

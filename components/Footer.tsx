@@ -49,13 +49,13 @@ export default function Footer() {
                                 <div className='py-1'>
                                     <Phone size={16} />
                                 </div>
-                                +91 9876543210
+                                +91 9990057744
                             </div>
                             <div className='flex gap-2 text-sm'>
                                 <div className='py-1'>
                                     <Mail size={16} />
                                 </div>
-                                vipul@vipulmotors.com
+                                contactus@vipulmotors.com
                             </div>
                         </div>
                     </div>

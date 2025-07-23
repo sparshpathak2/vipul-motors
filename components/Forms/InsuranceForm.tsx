@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Textarea } from './ui/textarea';
+import { Textarea } from '../ui/textarea';
 
 type FormData = {
     name: string;
@@ -24,7 +24,7 @@ type FormData = {
     message: string;
 };
 
-export default function ContactForm() {
+export default function InsuranceForm() {
     const {
         register,
         handleSubmit,
@@ -40,7 +40,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className='flex flex-col w-full p-4 text-white bg-black'>
+        <div className='flex flex-col w-full p-4 border-1 border-slate-200 shadow-md bg-white'>
             <div className='text-2xl font-semibold'>Get in touch</div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 pt-2">
