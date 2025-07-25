@@ -34,7 +34,10 @@ export default function page() {
                                     <div className='py-1'>
                                         <MapPin size={16} />
                                     </div>
-                                    This is going to be the address of the main branch. asudhhds vshdvoi sdhvh dsoif oishdf hioh
+                                    <div className='flex flex-col'>
+                                        <div>ARENA Vipul Motors Faridabad</div>
+                                        <div>Mathura Road, 27/5 KM, NH-19, Faridabad, Haryana 121002</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -44,7 +47,9 @@ export default function page() {
                                     <div className='py-1'>
                                         <Mail size={16} />
                                     </div>
-                                    <div className='font-semibold'>vipul@vipulmotors.com</div>
+                                    <a href="mailto:contactus@vipulmotors.com" className="font-semibold text-blue-600 underline">
+                                        contactus@vipulmotors.com
+                                    </a>
                                 </div>
                             </div>
 
@@ -56,7 +61,9 @@ export default function page() {
                                         <Phone size={16} />
                                     </div>
                                     <div className='flex flex-col gap-1'>
-                                        <div className='font-semibold'>+91 9876543210</div>
+                                        <a href="tel:+919876543210" className="font-semibold text-blue-600 underline">
+                                            +91 9876543210
+                                        </a>
                                         <div>Mon-Sat from 9 AM to 8 PM</div>
                                     </div>
                                 </div>

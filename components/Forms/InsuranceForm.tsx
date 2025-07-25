@@ -3,7 +3,6 @@
 import React from 'react'
 
 import { Controller, useForm } from "react-hook-form";
-// import { marutiSuzukiModels } from "@/lib/data";
 import {
     Select,
     SelectTrigger,
@@ -20,6 +19,7 @@ type FormData = {
     name: string;
     email: string;
     mobile: string;
+    location: string;
     // carModel?: string;
     message: string;
 };
@@ -95,6 +95,20 @@ export default function InsuranceForm() {
                     {errors.mobile && (
                         <p className="text-sm text-red-500 mt-1">
                             {errors.mobile.message as string}
+                        </p>
+                    )}
+                </div>
+
+                {/* Location */}
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="location">Location</Label>
+                    <Input
+                        id="location"
+                        {...register("location", { required: "Location is required" })}
+                    />
+                    {errors.location && (
+                        <p className="text-sm text-red-500 mt-1">
+                            {errors.location.message as string}
                         </p>
                     )}
                 </div>

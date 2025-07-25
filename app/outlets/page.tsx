@@ -153,7 +153,9 @@ export default function page() {
                                                     </div>
                                                     <div className='flex gap-2 items-center'>
                                                         <Phone size={16} />
-                                                        <p className='underline font-semibold'>{outlet.contactNo}</p>
+                                                        <a href={`tel:${outlet.contactNo}`} className="text-blue-600 underline font-semibold cursor-pointer">
+                                                            {outlet.contactNo}
+                                                        </a>
                                                     </div>
                                                     <div className='flex gap-2 items-center'>
                                                         <Mail size={16} />
@@ -181,16 +183,23 @@ export default function page() {
                                                 {/* <Badge className='rounded-full w-full text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge> */}
                                             </div>
                                             <div className='flex flex-col gap-2'>
-                                                <Button
-                                                    // className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'
-                                                    className='flex gap-2 font-semibold border-1' variant='outline'
+                                                <a
+                                                    href={outlet?.locationCta}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex w-full"
                                                 >
-                                                    <MapPin size={16} />
-                                                    Locate on Map
-                                                </Button>
+                                                    <Button
+                                                        // className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'
+                                                        className='flex w-full gap-2 font-semibold border-1 cursor-pointer' variant='outline'
+                                                    >
+                                                        <MapPin size={16} />
+                                                        Locate on Map
+                                                    </Button>
+                                                </a>
                                                 <Button
                                                     onClick={() => setIsFormOpen(true)}
-                                                    className='font-semibold'
+                                                    className='font-semibold cursor-pointer'
                                                 >
                                                     Request for Callback
                                                 </Button>

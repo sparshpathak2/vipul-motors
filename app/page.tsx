@@ -5,6 +5,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import Testimonials from "@/components/Testimonials";
 // import LocationPopup from "@/components/LocationPopup";
 import { Button } from "@/components/ui/button";
+import { models } from "@/lib/data";
 import { IconBrandSpeedtest, IconCar, IconCarSuv, IconEngine, IconGasStation } from "@tabler/icons-react";
 import { ArrowRightIcon, ArrowUpRight, Clock, MapPin, Store, Users } from "lucide-react";
 import Image from "next/image";
@@ -106,9 +107,9 @@ export default function Home() {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
-                  { label: 'ARENA', href: '/arena' },
-                  { label: 'NEXA', href: '/nexa' },
-                  { label: 'COMMERCIAL', href: '/commercial' },
+                  { label: 'ARENA', href: '/models?outlet=arena' },
+                  { label: 'NEXA', href: '/models?outlet=nexa' },
+                  { label: 'COMMERCIAL', href: '/models?outlet=commercial' },
                   { label: 'TRUE VALUE', href: '/true-value' },
                 ].map(({ label, href }) => (
                   <a
@@ -214,7 +215,8 @@ export default function Home() {
                 width={400}
                 height={400}
                 alt='anniversary'
-                src={'/grid-1.jpg'}
+                // src={'/grid-1.jpg'}
+                src={'/vipul-motors-gallery-10.webp'}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -223,7 +225,8 @@ export default function Home() {
                 width={400}
                 height={400}
                 alt='anniversary'
-                src={'/anniversary.png'}
+                // src={'/anniversary.png'}
+                src={'/35-years-of-excellence-4.png'}
                 className="w-full h-full p-2"
               />
             </div>
@@ -232,7 +235,8 @@ export default function Home() {
                 width={400}
                 height={400}
                 alt='anniversary'
-                src={'/grid-2.jpg'}
+                // src={'/grid-2.jpg'}
+                src={'/vipul-motors-gallery-4.webp'}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -241,7 +245,8 @@ export default function Home() {
                 width={400}
                 height={400}
                 alt='anniversary'
-                src={'/grid-3.jpg'}
+                // src={'/grid-3.jpg'}
+                src={'/vipul-motors-gallery-2.webp'}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -250,7 +255,8 @@ export default function Home() {
                 width={400}
                 height={400}
                 alt='anniversary'
-                src={'/grid-4.jpg'}
+                // src={'/grid-4.jpg'}
+                src={'/vipul-motors-gallery-8.webp'}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -359,8 +365,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-2 py-2 px-2">
-                <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button>
-                <Button className="flex-1 min-w-0 truncate">Get Price List</Button>
+                {/* <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button> */}
+                {/* <Button className="flex-1 min-w-0 truncate">Get Brochure</Button> */}
+                <a
+                  href="/models/Fronx-Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-0 truncate"
+                >
+                  <Button className="w-full">Get Brochure</Button>
+                </a>
               </div>
             </div>
           </div>
@@ -394,8 +408,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-2 py-2 px-2">
-                <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button>
-                <Button className="flex-1 min-w-0 truncate">Get Price List</Button>
+                {/* <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button> */}
+                {/* <Button className="flex-1 min-w-0 truncate">Get Brochure</Button> */}
+                <a
+                  href="/models/Grand-Vitara-Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-0 truncate"
+                >
+                  <Button className="w-full">Get Brochure</Button>
+                </a>
               </div>
             </div>
           </div>
@@ -429,8 +451,16 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-2 py-2 px-2">
-                <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button>
-                <Button className="flex-1 min-w-0 truncate">Get Price List</Button>
+                {/* <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button> */}
+                {/* <Button className="flex-1 min-w-0 truncate">Get Brochure</Button> */}
+                <a
+                  href="/models/Dzire-Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-0 truncate"
+                >
+                  <Button className="w-full">Get Brochure</Button>
+                </a>
               </div>
             </div>
           </div>
@@ -464,13 +494,61 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex gap-2 py-2 px-2">
-                <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button>
-                <Button className="flex-1 min-w-0 truncate">Get Price List</Button>
+                {/* <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button> */}
+                {/* <Button className="flex-1 min-w-0 truncate">Get Brochure</Button> */}
+                <a
+                  href="/models/Ertiga-Brochure.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-0 truncate"
+                >
+                  <Button className="w-full">Get Brochure</Button>
+                </a>
               </div>
             </div>
           </div>
 
         </div>
+
+        {/* <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1280px] px-4 sm:px-16 py-4'>
+          {
+            models.slice(0, 4).map((model, index) => (
+              <div key={index} className="flex flex-col gap-2 border border-gray-200">
+                <div className="h-[160px] flex items-center justify-center bg-white">
+                  <Image
+                    width={400}
+                    height={400}
+                    alt="anniversary"
+                    src="/fronx-2.webp"
+                    className="h-[140px] object-contain mx-auto"
+                  />
+                </div>
+                <div className="flex flex-col justify-between gap-2">
+                  <div className="flex flex-col gap-2 px-3">
+                    <div className="text-[20px] font-semibold">{model?.name}</div>
+                    <div className="flex flex-col gap-1 text-sm">
+                      <div className="flex items-center gap-2">
+                        <IconEngine size={24} />
+                        <div>{model?.displacement}</div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <IconGasStation size={24} />
+                        <div>{model?.fuelEfficiency}</div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <IconBrandSpeedtest size={22} />
+                        <div>{model?.power}</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex gap-2 py-2 px-2">
+                    <Button variant="outline" className="flex-1 min-w-0 truncate border border-blue-600">Get Brochure</Button>
+                    <Button className="flex-1 min-w-0 truncate">Get Price List</Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </div> */}
 
       </div>
 
@@ -587,11 +665,11 @@ export default function Home() {
                 <div className="flex flex-col gap-2 sm:gap-8 w-full">
                   <div className="flex flex-col gap-2">
                     <div className="text-[18px] sm:text-xl font-semibold">
-                      ARENA Vipul Motors Faridabad, Mathura Road
+                      ARENA Vipul Motors Faridabad, Ballabgarh
                     </div>
                     <div className="flex gap-2 text-sm">
                       <div className="py-1"><MapPin size={18} /></div>
-                      <div>27/5 KM, NH-19, Faridabad, Haryana 121002</div>
+                      <div>Shwar Bhawan, 21/3, Mathura Rd, Industrial Area, Sector 4, Ballabhgarh, Faridabad, Haryana 121004</div>
                     </div>
                   </div>
 
@@ -617,11 +695,11 @@ export default function Home() {
                 <div className="flex flex-col gap-2 sm:gap-8 w-full">
                   <div className="flex flex-col gap-2">
                     <div className="text-[18px] sm:text-xl font-semibold">
-                      ARENA Vipul Motors Faridabad, Mathura Road
+                      ARENA Vipul Motors, Gurgaon, Udyog Vihar Phase 3
                     </div>
                     <div className="flex gap-2 text-sm">
                       <div className="py-1"><MapPin size={18} /></div>
-                      <div>27/5 KM, NH-19, Faridabad, Haryana 121002</div>
+                      <div>Plot No 504, Plot No 504, Udyog Vihar Phase III, Phase III, Udyog Vihar, Sector 20, Gurugram, Haryana 122001</div>
                     </div>
                   </div>
 
