@@ -314,18 +314,26 @@ export default function page() {
                                 <Badge className='rounded-full w-fit text-red-600 bg-red-100 border-1 border-red-400 text-[13px] font-semibold'>{outlet.type}</Badge>
                             </div> */}
                                     <div className='flex flex-col gap-2'>
-                                        <Button
-                                            // className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'
-                                            className='flex gap-2 font-semibold border-1' variant='outline'
+                                        <a
+                                            href={outlet?.locationCta}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex w-full cursor-pointer"
                                         >
-                                            {/* <Button className='flex gap-2 bg-[#4263EB] hover:bg-blue-500 font-semibold'> */}
-                                            {/* <Button className='flex gap-2 bg-blue-600 hover:bg-blue-500 font-semibold'> */}
-                                            <MapPin size={16} />
-                                            Locate on Map
-                                        </Button>
+                                            <Button
+                                                // className='flex gap-2 font-semibold text-blue-700  hover:text-blue-700 border-1 border-blue-700' variant='outline'
+                                                className='flex w-full gap-2 font-semibold border-1' variant='outline'
+                                            >
+                                                {/* <Button className='flex gap-2 bg-[#4263EB] hover:bg-blue-500 font-semibold'> */}
+                                                {/* <Button className='flex gap-2 bg-blue-600 hover:bg-blue-500 font-semibold'> */}
+                                                <MapPin size={16} />
+                                                Locate on Map
+                                            </Button>
+
+                                        </a>
                                         <Button
                                             onClick={() => setIsFormOpen(true)}
-                                            className='font-semibold'>
+                                            className='font-semibold cursor-pointer'>
                                             Request for Callback
                                         </Button>
                                     </div>
