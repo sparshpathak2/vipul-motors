@@ -626,7 +626,9 @@ export default function Home() {
             <div className="w-full sm:w-1/3 flex flex-col gap-4">
 
               <a
-                href="/your-destination-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://maps.app.goo.gl/5w3QeoGxvVaZw6qW6"
                 className="group flex gap-4 border border-white p-4 transition duration-200 cursor-pointer"
               >
                 {/* Optional Left Image or Icon */}
@@ -656,7 +658,9 @@ export default function Home() {
               </a>
 
               <a
-                href="/your-destination-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://maps.app.goo.gl/N3pY4F8T4sXDArGq9"
                 className="group flex gap-4 border border-white p-4 transition duration-200 cursor-pointer"
               >
                 {/* Optional Left Image or Icon */}
@@ -686,7 +690,9 @@ export default function Home() {
               </a>
 
               <a
-                href="/your-destination-url"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://maps.app.goo.gl/yo1crKXkBjcbUoDx8"
                 className="group flex gap-4 border border-white p-4 transition duration-200 cursor-pointer"
               >
                 {/* Optional Left Image or Icon */}
