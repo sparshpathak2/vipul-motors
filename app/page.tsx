@@ -246,7 +246,7 @@ export default function Home() {
                 height={400}
                 alt='anniversary'
                 // src={'/grid-3.jpg'}
-                src={'/vipul-motors-gallery-2.webp'}
+                src={'/vipul-motors-gallery-1.webp'}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -560,8 +560,8 @@ export default function Home() {
             width={400}
             height={400}
             alt='anniversary'
-            src='/vipul-motors-gallery-5.webp'
-            className="w-full h-[240px] sm:h-full object-cover"
+            src='/vipul-motors-gallery-11.jpeg'
+            className="w-full h-[240px] sm:h-full object-cover object-left"
           />
         </div>
 
