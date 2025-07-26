@@ -1,3 +1,4 @@
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
@@ -18,9 +19,17 @@ export default function Footer() {
                         // src='/Vipul-Motors-Logo-1.svg'
                         src='/Vipul-Motors-Logo-2.svg'
                     /> */}
-                    <div className='flex flex-col gap-2'>
-                        <span className='text-2xl font-semibold'>DRIVEN BY TRUST.</span>
-                        <span className='text-2xl font-semibold'>DEFINED BY EXCELLENCE.</span>
+                    <div className='flex flex-col gap-3'>
+                        <div className='flex flex-col gap-2'>
+                            <span className='text-2xl font-semibold'>DRIVEN BY TRUST.</span>
+                            <span className='text-2xl font-semibold'>DEFINED BY EXCELLENCE.</span>
+                        </div>
+                        <div className='flex gap-2'>
+                            <a href="https://www.instagram.com/vipulmotorspvtltd?igsh=MXMxNGJhdnE3dDV3bw%3D%3D&utm_source=qr"><IconBrandInstagram size={28} /></a>
+                            <a href="https://www.facebook.com/profile.php?id=100094960847061"><IconBrandFacebook size={28} /></a>
+                            <a href="https://www.youtube.com/@vipulmotors8585"><IconBrandYoutube size={28} /></a>
+                            <a href="https://www.linkedin.com/company/vipul-motors-privet-limited/?viewAsMember=true"><IconBrandLinkedin size={28} /></a>
+                        </div>
                     </div>
                 </div>
 
@@ -29,10 +38,13 @@ export default function Footer() {
                     <div className='w-full sm:w-1/2 flex flex-col gap-2'>
                         <div className='font-semibold'>Important Links</div>
                         <div className='flex flex-col gap-1 text-sm'>
-                            <div>About Us</div>
-                            <div>Contact Us</div>
-                            <div>Terms & Conditions</div>
-                            <div>Privacy Policy</div>
+                            {/* <a href='/about-us'>About Us</a> */}
+                            <a href='/models'>All Models</a>
+                            <a href='/service'>Book A Service</a>
+                            <a href='/book-test-drive'>Book A Test Drive</a>
+                            <a href='/contact-us'>Contact Us</a>
+                            {/* <a href='terms-and-conditions'>Terms & Conditions</a> */}
+                            {/* <a href='privacy-policy'>Privacy Policy</a> */}
                         </div>
                     </div>
 
@@ -53,7 +65,7 @@ export default function Footer() {
                                     <Phone size={16} />
                                 </div>
                                 <a href="tel:+919876543210" className="font-semibold text-white underline">
-                                    +91 9876543210
+                                    +91 9990057744
                                 </a>
                             </div>
                             <div className='flex gap-2 text-sm'>

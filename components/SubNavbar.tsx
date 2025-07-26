@@ -1,14 +1,22 @@
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react'
 import { Clock, Mail, Phone } from 'lucide-react'
 import React from 'react'
 
 export default function SubNavbar() {
     return (
-        <div className='flex w-full py-2 px-2 sm:px-16 border-b border-gray-200 text-[15px] justify-end'>
+        <div className='flex w-full py-2 px-2 sm:px-16 border-b border-gray-200 text-[15px] justify-between'>
+            <div className='flex gap-3 items-center text-[#06046C]'>
+                <a href="https://www.instagram.com/vipulmotorspvtltd?igsh=MXMxNGJhdnE3dDV3bw%3D%3D&utm_source=qr"><IconBrandInstagram size={20} stroke={1.8} /></a>
+                <a href="https://www.facebook.com/profile.php?id=100094960847061"><IconBrandFacebook size={20} stroke={1.8} /></a>
+                <a href="https://www.youtube.com/@vipulmotors8585"><IconBrandYoutube size={20} stroke={1.8} /></a>
+                <a href="https://www.linkedin.com/company/vipul-motors-privet-limited/?viewAsMember=true"><IconBrandLinkedin size={20} stroke={1.6} /></a>
+            </div>
+
             <div className='flex gap-4 h-full'>
                 <div className='flex gap-2 items-center'>
                     <Phone size={14} className='text-blue-700' />
                     <a href="tel:+919876543210" className="text-sm font-semibold text-blue-600">
-                        +91 9876543210
+                        +91 9990057744
                     </a>
                 </div>
                 <div className='flex gap-2 items-center'>

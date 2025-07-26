@@ -246,7 +246,7 @@ export default function Home() {
                 height={400}
                 alt='anniversary'
                 // src={'/grid-3.jpg'}
-                src={'/vipul-motors-gallery-5.webp'}
+                src={'/vipul-motors-gallery-2.webp'}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -325,7 +325,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0">
           <div className="flex flex-col gap-2">
             <h2 className="font-semibold text-3xl">Explore Models</h2>
-            <div>Lorem ipsum dolor sit amet consectetur. In amet risus mi risus habitant porttitor tincidunt.</div>
+            <div>Discover the perfect Maruti Suzuki car for your lifestyle, from everyday drives to premium experiences.</div>
           </div>
 
           <a href="/models" className="group flex gap-2 items-center border-1 bg-blue-600 hover:bg-blue-800 text-white w-fit h-fit px-4 py-3">
@@ -560,7 +560,7 @@ export default function Home() {
             width={400}
             height={400}
             alt='anniversary'
-            src='/vipul-motors-gallery-2.webp'
+            src='/vipul-motors-gallery-5.webp'
             className="w-full h-[240px] sm:h-full object-cover"
           />
         </div>
@@ -736,6 +736,19 @@ export default function Home() {
 
         </div>
       </div>
+
+      <a
+        href="https://wa.me/919990057744"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+          alt="WhatsApp Chat"
+          className="w-14 h-14 hover:scale-105 transition-transform"
+        />
+      </a>
 
 
     </div >

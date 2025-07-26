@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ChevronDown, Clock, Mail, Menu, Phone, X } from 'lucide-react';
 import Link from 'next/link';
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react';
 
 const MobileMenu = () => {
     const [open, setOpen] = useState(false);
@@ -166,8 +167,8 @@ const MobileMenu = () => {
                         </div> */}
                     </div>
 
-                    <div>
-                        <div className='flex flex-col gap-1 h-full p-4'>
+                    <div className='flex flex-col gap-8 h-full p-4'>
+                        <div className='flex flex-col gap-1'>
                             <div className='italic'>CONTACT DETAILS</div>
                             <div className='flex gap-2 items-center'>
                                 <Phone size={16} className='text-blue-700' />
@@ -181,6 +182,13 @@ const MobileMenu = () => {
                                 <Clock size={16} className='text-blue-700' />
                                 <div>Mon-Sun: 9AM-7PM</div>
                             </div>
+                        </div>
+
+                        <div className='flex gap-3 items-center text-blue-600'>
+                            <a href="https://www.instagram.com/vipulmotorspvtltd?igsh=MXMxNGJhdnE3dDV3bw%3D%3D&utm_source=qr"><IconBrandInstagram size={28} /></a>
+                            <a href="https://www.facebook.com/profile.php?id=100094960847061"><IconBrandFacebook size={28} /></a>
+                            <a href="https://www.youtube.com/@vipulmotors8585"><IconBrandYoutube size={28} /></a>
+                            <a href="https://www.linkedin.com/company/vipul-motors-privet-limited/?viewAsMember=true"><IconBrandLinkedin size={28} /></a>
                         </div>
                     </div>
 
