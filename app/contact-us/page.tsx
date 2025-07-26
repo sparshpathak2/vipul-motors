@@ -62,7 +62,7 @@ export default function page() {
                                     </div>
                                     <div className='flex flex-col gap-1'>
                                         <a href="tel:+919876543210" className="font-semibold text-blue-600 underline">
-                                            +91 9876543210
+                                            +91 9990057744
                                         </a>
                                         <div>Mon-Sat from 9 AM to 8 PM</div>
                                     </div>
