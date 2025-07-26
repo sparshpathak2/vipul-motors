@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from '../ui/textarea';
+import { outlets } from '@/lib/data';
 
 type FormData = {
     name: string;
@@ -38,6 +39,8 @@ export default function ServiceForm() {
         reset();
         // onClose();
     };
+
+    const workshops = outlets.filter(outlet => outlet.type.toLowerCase() === "workshop");
 
     return (
         <div className='flex flex-col w-full p-4 border-1 border-slate-200 shadow-md bg-white'>
@@ -100,7 +103,7 @@ export default function ServiceForm() {
                 </div>
 
                 {/* Location */}
-                <div className="flex flex-col gap-2">
+                {/* <div className="flex flex-col gap-2">
                     <Label htmlFor="location">Location</Label>
                     <Input
                         id="location"
@@ -111,13 +114,13 @@ export default function ServiceForm() {
                             {errors.location.message as string}
                         </p>
                     )}
-                </div>
+                </div> */}
 
-                {/* Car Model Dropdown */}
-                {/* <div className="flex flex-col gap-2">
-                    <Label htmlFor="carModel">Car Model</Label>
+                {/* Service Location */}
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="location">Service Location</Label>
                     <Controller
-                        name="carModel"
+                        name="location"
                         control={control}
                         rules={{ required: "Car model is required" }}
                         render={({ field }) => (
@@ -126,21 +129,21 @@ export default function ServiceForm() {
                                     <SelectValue placeholder="Select a model" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                    {marutiSuzukiModels.map((model) => (
-                                        <SelectItem key={model} value={model}>
-                                            {model}
+                                    {workshops?.map((workshop) => (
+                                        <SelectItem key={workshop.title} value={workshop.title}>
+                                            {workshop.title}
                                         </SelectItem>
                                     ))}
                                 </SelectContent>
                             </Select>
                         )}
                     />
-                    {errors.carModel && (
+                    {errors.location && (
                         <p className="text-sm text-red-500 mt-1">
-                            {errors.carModel.message as string}
+                            {errors.location.message as string}
                         </p>
                     )}
-                </div> */}
+                </div>
 
                 {/* Message */}
                 <div className="flex flex-col gap-2">
