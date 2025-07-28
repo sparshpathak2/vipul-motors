@@ -43,7 +43,7 @@ export default function ModelsPageComponent() {
     };
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className='flex w-full h-full justify-center top-4'>Loading...</div>}>
 
             <div className='flex flex-col w-full justify-center items-center'>
 
