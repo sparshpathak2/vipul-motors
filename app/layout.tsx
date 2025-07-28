@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import SubNavbar from "@/components/SubNavbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -35,6 +36,17 @@ export default function RootLayout({
               <Navbar />
             </div>
           </div>
+
+          {/* React Hot Toast Toaster */}
+          <Toaster
+            position="top-center"
+            toastOptions={{
+              duration: 5000,
+              style: {
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+              }
+            }}
+          />
 
           {/* Pushes content below fixed navbar */}
           <main className="pt-[72px] sm:pt-[108px] flex-grow">

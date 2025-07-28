@@ -13,40 +13,100 @@ type FAQCategory = {
 };
 
 const faqData: FAQCategory = {
-    "Service Related": [
+    "General Queries": [
         {
-            question: "What is your return policy?",
+            question: "What are the working hours of Vipul Motors showrooms and service centers?",
             answer:
-                "We offer a 30-day return policy for unused items in their original packaging.",
+                "Our showrooms are open from 9:30 AM to 7:00 PM, and service centers operate from 9:00 AM to 6:00 PM, Monday to Sunday. Timings may vary slightly by location.",
         },
         {
-            question: "How can I track my order?",
+            question: "Where are Vipul Motors showrooms located?",
             answer:
-                "You will receive an email with tracking information once your order is shipped.",
+                "Vipul Motors has multiple locations across Delhi-NCR, Rajasthan, and Haryana.",
+        },
+        {
+            question: "Which car brands do you deal in?",
+            answer:
+                "We are an authorized dealer for Maruti Suzuki Arena and Nexa cars.",
         },
     ],
-    "General": [
+    "Car Sales & Booking": [
         {
-            question: "Do you offer customer support?",
-            answer: "Yes, our support team is available 24/7 via chat and email.",
+            question: "How can I book a test drive?",
+            answer:
+                "You can book a test drive through our website, WhatsApp, or by calling your nearest showroom.",
         },
         {
-            question: "What payment methods are accepted?",
-            answer: "We accept credit cards, PayPal, and bank transfers.",
+            question: "Is home test drive available?",
+            answer:
+                "Yes, we offer home test drive services for selected models in selected areas.",
+        },
+        {
+            question: "What documents are required to buy a new car?",
+            answer:
+                "You’ll need a valid ID proof, address proof, PAN card, and recent photographs. For loan cases, additional documents are required.",
         },
     ],
-    "Preventive Measures": [
+    "Finance & Insurance": [
         {
-            question: "What precautions are taken during servicing?",
+            question: "Do you provide finance options for car purchase?",
             answer:
-                "All vehicles are sanitized post-service and contactless interactions are ensured.",
+                "Yes, we have tie-ups with major banks and NBFCs to offer competitive car loan options with quick approval.",
         },
         {
-            question: "Do staff follow safety protocols?",
-            answer: "Yes, all technicians wear protective gear and follow hygiene standards.",
+            question: "Can I get my car insured at Vipul Motors?",
+            answer:
+                "Absolutely. We offer motor insurance and renewal services through leading insurance providers.",
+        },
+        {
+            question: "Do you assist with exchange offers?",
+            answer:
+                "Yes, we provide car exchange facilities with best market price valuation of your old car.",
+        },
+    ],
+    "Service & Maintenance": [
+        {
+            question: "How can I book a car service?",
+            answer:
+                "You can book a service appointment online, through our mobile app, or by calling our service center directly.",
+        },
+        {
+            question: "What services are included in the routine check-up?",
+            answer:
+                "Our routine service includes engine oil change, brake inspection, battery check, AC performance, tyre rotation, and more.",
+        },
+        {
+            question: "Do you provide doorstep service or pick-up/drop facility?",
+            answer:
+                "Yes, we offer free pick-up and drop service in selected areas. Please confirm with your nearest branch.",
+        },
+    ],
+    "Maruti Suzuki Smart Features": [
+        {
+            question: "What is the Maruti Suzuki Smart Finance platform?",
+            answer:
+                "It's a one-stop online platform that helps you choose, apply, and get car loan approval instantly.",
+        },
+        {
+            question: "Can I track my service status online?",
+            answer:
+                "Yes, with the Maruti Suzuki Rewards App or website, you can track service status, history, and billing.",
+        },
+    ],
+    "Others": [
+        {
+            question: "How can I provide feedback or raise a complaint?",
+            answer:
+                "You can reach out via our contact page, WhatsApp helpline, or call our customer care team. We value your feedback.",
+        },
+        {
+            question: "Do you offer any loyalty or rewards program?",
+            answer:
+                "Yes, Maruti Suzuki Rewards program offers points on every service, insurance, and referral – which you can redeem later.",
         },
     ],
 };
+
 
 const categories = Object.keys(faqData);
 
@@ -89,7 +149,8 @@ export default function FAQs() {
                 </div>
 
                 {/* Right: FAQs */}
-                <div className="flex flex-col w-[800px] border-x-1 border-x-gray-200 border-t-1 border-t-gray-200">
+                {/* <div className="flex flex-col w-[800px] border-x-1 border-x-gray-200 border-t-1 border-t-gray-200"> */}
+                <div className="flex flex-col w-[800px] border-t-1 border-t-gray-200">
                     {faqData[selectedCategory].map((faq, index) => (
                         <div
                             key={index}
@@ -97,13 +158,13 @@ export default function FAQs() {
                         >
                             <button
                                 onClick={() => toggleIndex(index)}
-                                className="w-full flex justify-between items-center p-4 text-left font-medium cursor-pointer border-b-1 border-gray-200"
+                                className="w-full flex justify-between items-center p-4 text-left font-medium cursor-pointer border-b-1 border-gray-200 border-x-1 border-x-gray-200"
                             >
                                 <span>{faq.question}</span>
                                 <span>{activeIndex === index ? <ChevronUp /> : <ChevronDown />}</span>
                             </button>
                             <div
-                                className={`p-4 text-gray-700 text-left transition-all duration-300 ease-in-out ${activeIndex === index ? "block border-b-1 border-gray-200" : "hidden"
+                                className={`p-4 text-gray-700 text-left transition-all duration-300 ease-in-out ${activeIndex === index ? "block border-b-1 border-gray-200 border-x-1 border-x-gray-200" : "hidden"
                                     }`}
                             >
                                 {faq.answer}

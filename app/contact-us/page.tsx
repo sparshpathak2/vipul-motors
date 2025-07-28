@@ -47,7 +47,7 @@ export default function page() {
                                     <div className='py-1'>
                                         <Mail size={16} />
                                     </div>
-                                    <a href="mailto:contactus@vipulmotors.com" className="font-semibold text-blue-600 underline">
+                                    <a href="mailto:contactus@vipulmotors.com" target="_blank" className="font-semibold text-blue-600 underline">
                                         contactus@vipulmotors.com
                                     </a>
                                 </div>
@@ -61,7 +61,7 @@ export default function page() {
                                         <Phone size={16} />
                                     </div>
                                     <div className='flex flex-col gap-1'>
-                                        <a href="tel:+919876543210" className="font-semibold text-blue-600 underline">
+                                        <a href="tel:+919990057744" target="_blank" className="font-semibold text-blue-600 underline">
                                             +91 9990057744
                                         </a>
                                         <div>Mon-Sat from 9 AM to 8 PM</div>

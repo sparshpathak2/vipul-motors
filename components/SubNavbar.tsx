@@ -15,13 +15,13 @@ export default function SubNavbar() {
             <div className='flex gap-4 h-full'>
                 <div className='flex gap-2 items-center'>
                     <Phone size={14} className='text-blue-700' />
-                    <a href="tel:+919876543210" className="text-sm font-semibold text-blue-600">
+                    <a href="tel:+919990057744" target="_blank" className="text-sm font-semibold text-blue-600">
                         +91 9990057744
                     </a>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <Mail size={14} className='text-blue-700' />
-                    <a href="mailto:contactus@vipulmotors.com" className="text-sm font-semibold text-blue-600">
+                    <a href="mailto:contactus@vipulmotors.com" target="_blank" className="text-sm font-semibold text-blue-600">
                         contactus@vipulmotors.com
                     </a>
                 </div>

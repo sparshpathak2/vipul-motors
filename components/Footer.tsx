@@ -64,7 +64,7 @@ export default function Footer() {
                                 <div className='py-1'>
                                     <Phone size={16} />
                                 </div>
-                                <a href="tel:+919876543210" className="font-semibold text-white underline">
+                                <a href="tel:+919990057744" target="_blank" className="font-semibold text-white underline">
                                     +91 9990057744
                                 </a>
                             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
                                 <div className='py-1'>
                                     <Mail size={16} />
                                 </div>
-                                <a href="mailto:contactus@vipulmotors.com" className="font-semibold text-white underline">
+                                <a href="mailto:contactus@vipulmotors.com" target="_blank" className="font-semibold text-white underline">
                                     contactus@vipulmotors.com
                                 </a>
                             </div>

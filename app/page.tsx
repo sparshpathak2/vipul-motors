@@ -153,14 +153,14 @@ export default function Home() {
 
         {/* 3 */}
         <a
-          href="/roadside-assistance"
+          href="/insurance-renewal"
           className="relative flex flex-col row-span-2 row-start-3 sm:col-span-2 sm:row-span-2 sm:col-start-7 cursor-pointer group overflow-hidden bg-black p-4"
         >
           {/* Content */}
           <div className="z-10 flex flex-col justify-between h-full text-white">
             <div className="flex flex-col gap-2">
-              <div className="text-2xl font-semibold">Roadside Assistance</div>
-              <div className="text-sm sm:text-md">Get 24x7 on-road support across India for breakdowns, towing, and emergency help.</div>
+              <div className="text-2xl font-semibold">Insurance Renewal</div>
+              <div className="text-sm sm:text-md">Keep your car covered—renew your insurance online quickly and securely.</div>
             </div>
 
             {/* Arrow */}
@@ -202,6 +202,44 @@ export default function Home() {
             </div>
           </div>
         </a>
+
+      </div>
+
+      {/* About Section */}
+      <div className="flex flex-col sm:flex-row bg-white mx-4 sm:mx-16 my-16">
+
+        <div className="w-full sm:w-2/5 h-[240px] sm:h-[440px]">
+          <Image
+            width={400}
+            height={400}
+            alt='anniversary'
+            src='/vipul-motors-gallery-11.jpeg'
+            className="w-full h-[240px] sm:h-full object-cover object-left"
+          />
+        </div>
+
+        <div className="flex w-full sm:w-3/5 flex-col gap-4 p-4 sm:px-12 sm:py-8 justify-between">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-3xl font-semibold">About Us</h2>
+            <div className="flex flex-col gap-2">
+              <div>
+                Vipul Motors – Driven by Trust, Defined by Service
+              </div>
+              <div>
+                Established in 1987, Vipul Motors is a leading and trusted dealership of Maruti Suzuki, known for delivering outstanding customer experiences across every touchpoint. With a legacy of over three decades, we have built our reputation on the pillars of honesty, commitment, and customer-first thinking.
+              </div>
+              <div>
+                Our growing footprint includes 19 showrooms and 30 workshops strategically located across Delhi, Noida, Gurgaon, Faridabad, Jaipur, Dausa, and Bikaner. We proudly represent the full Maruti Suzuki portfolio—Arena, Nexa, True Value, and Service—ensuring that every customer finds the right car and continued care throughout their ownership journey.
+              </div>
+            </div>
+          </div>
+          <div className="flex sm:justify-end">
+            <Button className="w-fit">
+              Read more
+              <ArrowRightIcon />
+            </Button>
+          </div>
+        </div>
 
       </div>
 
@@ -549,44 +587,6 @@ export default function Home() {
               </div>
             ))}
         </div> */}
-
-      </div>
-
-      {/* About Section */}
-      <div className="flex flex-col sm:flex-row bg-white mx-4 sm:mx-16 my-4">
-
-        <div className="w-full sm:w-2/5 h-[240px] sm:h-[440px]">
-          <Image
-            width={400}
-            height={400}
-            alt='anniversary'
-            src='/vipul-motors-gallery-11.jpeg'
-            className="w-full h-[240px] sm:h-full object-cover object-left"
-          />
-        </div>
-
-        <div className="flex w-full sm:w-3/5 flex-col gap-4 p-4 sm:px-12 sm:py-8 justify-between">
-          <div className="flex flex-col gap-2">
-            <h2 className="text-3xl font-semibold">About Us</h2>
-            <div className="flex flex-col gap-2">
-              <div>
-                Vipul Motors – Driven by Trust, Defined by Service
-              </div>
-              <div>
-                Established in 1987, Vipul Motors is a leading and trusted dealership of Maruti Suzuki, known for delivering outstanding customer experiences across every touchpoint. With a legacy of over three decades, we have built our reputation on the pillars of honesty, commitment, and customer-first thinking.
-              </div>
-              <div>
-                Our growing footprint includes 19 showrooms and 30 workshops strategically located across Delhi, Noida, Gurgaon, Faridabad, Jaipur, Dausa, and Bikaner. We proudly represent the full Maruti Suzuki portfolio—Arena, Nexa, True Value, and Service—ensuring that every customer finds the right car and continued care throughout their ownership journey.
-              </div>
-            </div>
-          </div>
-          <div className="flex sm:justify-end">
-            <Button className="w-fit">
-              Read more
-              <ArrowRightIcon />
-            </Button>
-          </div>
-        </div>
 
       </div>
 

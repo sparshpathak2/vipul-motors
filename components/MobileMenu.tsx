@@ -172,11 +172,17 @@ const MobileMenu = () => {
                             <div className='italic'>CONTACT DETAILS</div>
                             <div className='flex gap-2 items-center'>
                                 <Phone size={16} className='text-blue-700' />
-                                <div>+91 99900 57744</div>
+                                {/* <div>+91 9990057744</div> */}
+                                <a href="tel:+919990057744" target="_blank" className="font-semibold text-blue-600 underline">
+                                    +91 9990057744
+                                </a>
                             </div>
                             <div className='flex gap-2 items-center'>
                                 <Mail size={16} className='text-blue-700' />
-                                <div>contactus@vipulmotors.com</div>
+                                {/* <div>contactus@vipulmotors.com</div> */}
+                                <a href="mailto:contactus@vipulmotors.com" target="_blank" className="font-semibold text-blue-600 underline">
+                                    contactus@vipulmotors.com
+                                </a>
                             </div>
                             <div className='flex gap-2 items-center'>
                                 <Clock size={16} className='text-blue-700' />
