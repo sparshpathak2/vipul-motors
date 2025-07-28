@@ -1,8 +1,22 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import MobileMenu from './MobileMenu'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Navbar() {
+    const pathname = usePathname()
+    const isActive = (href: string) => pathname === href
+
+    const linkClass = (href: string) =>
+        `flex h-full items-center border-b-2 transition ${isActive(href)
+            ? 'font-semibold border-blue-700'
+            : 'border-transparent hover:border-blue-700'
+        }`
+
+
     return (
         <div className='flex w-full px-2 sm:px-16 h-18 justify-between items-center border-b border-gray-200'>
             {/* <div>
@@ -62,54 +76,37 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <a
-                    href="/pre-owned"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/pre-owned" className={linkClass('/pre-owned')}>
                     Pre Owned
-                </a>
+                </Link>
 
-                <a
-                    href="/service"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/service" className={linkClass('/service')}>
                     Service
-                </a>
+                </Link>
 
-                <a
-                    href="/outlets"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/outlets" className={linkClass('/outlets')}>
                     Outlets
-                </a>
+                </Link>
 
-                <a
-                    href="/driving-school"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/driving-school" className={linkClass('/driving-school')}>
                     Driving School
-                </a>
+                </Link>
 
-                <a
-                    href="/car-loan"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/car-loan" className={linkClass('/car-loan')}>
                     Car Loan
-                </a>
+                </Link>
 
-                <a
-                    href="/insurance"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/insurance" className={linkClass('/insurance')}>
                     Insurance
-                </a>
+                </Link>
 
-                <a
-                    href="/contact-us"
-                    className="flex h-full items-center border-b-2 border-transparent hover:border-blue-700 transition"
-                >
+                <Link href="/about-us" className={linkClass('/about-us')}>
+                    About Us
+                </Link>
+
+                <Link href="/contact-us" className={linkClass('/contact-us')}>
                     Contact Us
-                </a>
+                </Link>
 
                 {/* <a
                     href="/"

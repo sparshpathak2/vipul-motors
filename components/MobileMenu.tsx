@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { ChevronDown, Clock, Mail, Menu, Phone, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconBrandYoutube } from '@tabler/icons-react';
 
@@ -9,6 +10,9 @@ const MobileMenu = () => {
     const [open, setOpen] = useState(false);
     const [corporateOpen, setCorporateOpen] = useState(false);
     const [newCarsOpen, setNewCarsOpen] = useState(false);
+    const pathname = usePathname();
+
+    const isActive = (href: string) => pathname === href;
 
     const toggleMenu = () => setOpen(!open);
 
@@ -66,6 +70,14 @@ const MobileMenu = () => {
                                     >
                                         Arena
                                     </Link>
+                                    {/* <Link
+                                        href="/models?outlet=arena"
+                                        className={`block pl-6 py-2 border-b border-gray-200 ${isActive('/models?outlet=arena') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                            }`}
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        Arena
+                                    </Link> */}
                                     <Link
                                         href="/models?outlet=nexa"
                                         className="block pl-6 py-2 border-b border-gray-200 hover:bg-gray-100"
@@ -86,53 +98,76 @@ const MobileMenu = () => {
 
                         <Link
                             href="/pre-owned"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/pre-owned') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Pre Owned
                         </Link>
+
                         <Link
                             href="/service"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/service') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Service
                         </Link>
+
                         <Link
                             href="/outlets"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/outlets') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Outlets
                         </Link>
+
                         <Link
                             href="/driving-school"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/driving-school') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Driving School
                         </Link>
+
                         <Link
                             href="/car-loan"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/car-loan') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Car Loan
                         </Link>
+
                         <Link
                             href="/insurance"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/insurance') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Insurance
                         </Link>
+
+                        <Link
+                            href="/about-us"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/about-us') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
+                            onClick={() => setOpen(false)}
+                        >
+                            About Us
+                        </Link>
+
                         <Link
                             href="/contact-us"
-                            className="block px-4 py-2 hover:bg-gray-100 border-b border-gray-200"
+                            className={`block px-4 py-2 border-b border-gray-200 ${isActive('/contact-us') ? 'font-semibold bg-gray-100' : 'hover:bg-gray-100'
+                                }`}
                             onClick={() => setOpen(false)}
                         >
                             Contact Us
                         </Link>
+
 
                         {/* <div className="border-b border-gray-200">
                             <button
