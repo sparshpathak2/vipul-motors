@@ -44,6 +44,8 @@ export default function RootLayout({
               duration: 5000,
               style: {
                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
               }
             }}
           />
