@@ -206,7 +206,7 @@ export default function Home() {
       </div>
 
       {/* About Section */}
-      <div className="flex flex-col sm:flex-row bg-white mx-4 sm:mx-16 my-16">
+      {/* <div className="flex flex-col sm:flex-row bg-white mx-4 sm:mx-16 my-16">
 
         <div className="w-full sm:w-2/5 h-[240px] sm:h-[440px]">
           <Image
@@ -241,7 +241,7 @@ export default function Home() {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
       {/* Features Section */}
       <div className="flex flex-col sm:flex-row bg-white justify-center items-center gap-16 sm:py-16 px-4 sm:px-30 py-8 w-full">
