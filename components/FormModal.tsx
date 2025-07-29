@@ -19,25 +19,65 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { createQuery } from "@/api/query";
+import { Textarea } from "./ui/textarea";
 
 interface FormModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
+type FormData = {
+    name: string;
+    email: string;
+    mobile: string;
+    location: string;
+    // carModel?: string;
+    message: string;
+};
+
 export default function FormModal({ isOpen, onClose }: FormModalProps) {
+
+    const [loading, setLoading] = useState(false);
+
     const {
         register,
         handleSubmit,
         reset,
         control,
         formState: { errors },
-    } = useForm();
+    } = useForm<FormData>();
 
-    const onSubmit = (data: any) => {
-        console.log("Form submitted:", data);
-        reset();
-        onClose();
+    // const onSubmit = (data: any) => {
+    //     console.log("Form submitted:", data);
+    //     reset();
+    //     onClose();
+    // };
+
+    const onSubmit = async (data: any) => {
+        setLoading(true);
+        // console.log("data from contact form", data);
+
+        const dataWithSource = {
+            ...data,
+            source: "Outlet Query", // Add source field
+        };
+
+        try {
+            await createQuery(dataWithSource);
+            console.log("Query submitted successfully!");
+            reset();
+            onClose();
+
+            toast.success("Your query was submitted successfully!");
+        } catch (error) {
+            console.error("Failed to submit query:", error);
+            toast.error("Something went wrong. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -65,25 +105,6 @@ export default function FormModal({ isOpen, onClose }: FormModalProps) {
                         )}
                     </div>
 
-                    {/* Email (Optional) */}
-                    <div className="flex flex-col gap-2">
-                        <Label htmlFor="email">Email (Optional)</Label>
-                        <Input
-                            id="email"
-                            type="email"
-                            {...register("email", {
-                                pattern: {
-                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                    message: "Enter a valid email",
-                                },
-                            })}
-                        />
-                        {errors.email && (
-                            <p className="text-sm text-red-500 mt-1">
-                                {errors.email.message as string}
-                            </p>
-                        )}
-                    </div>
 
                     {/* Mobile Number */}
                     <div className="flex flex-col gap-2">
@@ -106,8 +127,43 @@ export default function FormModal({ isOpen, onClose }: FormModalProps) {
                         )}
                     </div>
 
-                    {/* Car Model Dropdown */}
+                    {/* Email (Optional) */}
                     <div className="flex flex-col gap-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                            id="email"
+                            type="email"
+                            {...register("email", {
+                                pattern: {
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: "Enter a valid email",
+                                },
+                            })}
+                        />
+                        {errors.email && (
+                            <p className="text-sm text-red-500 mt-1">
+                                {errors.email.message as string}
+                            </p>
+                        )}
+                    </div>
+
+
+                    {/* Location */}
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="location">Location</Label>
+                        <Input
+                            id="location"
+                            {...register("location", { required: "Location is required" })}
+                        />
+                        {errors.location && (
+                            <p className="text-sm text-red-500 mt-1">
+                                {errors.location.message as string}
+                            </p>
+                        )}
+                    </div>
+
+                    {/* Car Model Dropdown */}
+                    {/* <div className="flex flex-col gap-2">
                         <Label htmlFor="carModel">Car Model</Label>
                         <Controller
                             name="carModel"
@@ -133,6 +189,22 @@ export default function FormModal({ isOpen, onClose }: FormModalProps) {
                                 {errors.carModel.message as string}
                             </p>
                         )}
+                    </div> */}
+
+                    {/* Message */}
+                    <div className="flex flex-col gap-2">
+                        <Label htmlFor="message">Message (Optional)</Label>
+                        <Textarea
+                            id="message"
+                            rows={4}
+                            placeholder="Write your message here..."
+                            {...register("message")}
+                        />
+                        {errors.message && (
+                            <p className="text-sm text-red-500 mt-1">
+                                {errors.message.message}
+                            </p>
+                        )}
                     </div>
 
                     {/* Buttons */}
@@ -140,7 +212,9 @@ export default function FormModal({ isOpen, onClose }: FormModalProps) {
                         <Button variant="outline" type="button" onClick={onClose}>
                             Cancel
                         </Button>
-                        <Button type="submit">Submit</Button>
+                        <Button type="submit" disabled={loading}>
+                            {loading ? "Submitting..." : "Submit"}
+                        </Button>
                     </div>
                 </form>
 

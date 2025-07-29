@@ -1,6 +1,6 @@
 'use client'
 
-import DrivingSchoolForm from '@/components/Forms/DrivingSchool'
+import DrivingSchoolForm from '@/components/Forms/DrivingSchoolForm'
 import React from 'react'
 
 export default function page() {

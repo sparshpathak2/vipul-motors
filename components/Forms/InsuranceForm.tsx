@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Controller, useForm } from "react-hook-form";
 import {
@@ -14,6 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from '../ui/textarea';
+import { createQuery } from '@/api/query';
+import toast from 'react-hot-toast';
 
 type FormData = {
     name: string;
@@ -25,6 +27,8 @@ type FormData = {
 };
 
 export default function InsuranceForm() {
+    const [loading, setLoading] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -33,10 +37,27 @@ export default function InsuranceForm() {
         formState: { errors },
     } = useForm<FormData>();
 
-    const onSubmit = (data: any) => {
-        console.log("Form submitted:", data);
-        reset();
-        // onClose();
+    const onSubmit = async (data: any) => {
+        setLoading(true);
+        // console.log("data from contact form", data);
+
+        const dataWithSource = {
+            ...data,
+            source: "Insurance", // Add source field
+        };
+
+        try {
+            await createQuery(dataWithSource);
+            console.log("Query submitted successfully!");
+            reset();
+
+            toast.success("Your query was submitted successfully!");
+        } catch (error) {
+            console.error("Failed to submit query:", error);
+            toast.error("Something went wrong. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -163,7 +184,9 @@ export default function InsuranceForm() {
                     {/* <Button variant="outline" type="button" onClick={onClose}>
                         Cancel
                     </Button> */}
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit" disabled={loading}>
+                        {loading ? "Submitting..." : "Submit"}
+                    </Button>
                 </div>
             </form>
         </div>
