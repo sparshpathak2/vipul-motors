@@ -23,7 +23,7 @@ export default function page() {
             </div>
 
             <div className='flex w-full justify-center'>
-                <div className='flex w-full md:w-[70%] flex-col sm:justify-center py-4 sm:pt-8 sm:pb-16 px-4 md:px-0 gap-12 sm:gap-16'>
+                <div className='flex w-full md:w-[65%] flex-col sm:justify-center py-4 sm:pt-8 sm:pb-16 px-4 md:px-0 gap-12 sm:gap-16'>
 
                     {/* <div className='sm:w-1/2 w-full flex flex-col gap-4'> */}
                     <div className='w-full flex flex-col sm:flex-row gap-8 sm:gap-4 h-full'>
@@ -167,7 +167,7 @@ export default function page() {
                     {/* <div className=''> */}
                     <div className='flex flex-col gap-4'>
                         <div className='text-3xl font-semibold'>Our Team</div>
-                        <div className='grid grid-cols-1 sm:grid-cols-4 w-full h-full gap-4'>
+                        <div className='grid grid-cols-1 sm:grid-cols-3 w-full h-full gap-4'>
 
                             <div className='flex flex-col gap-2'>
                                 <div className='bg-gray-300 h-[300px]'></div>
@@ -193,14 +193,14 @@ export default function page() {
                                     <div className='text-sm'>Director, Vipul Motors Pvt. Ltd.</div>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-2'>
+                            {/* <div className='flex flex-col gap-2'>
                                 <div className='bg-gray-300 h-[300px]'></div>
 
                                 <div className='flex flex-col gap-1'>
                                     <div className='text-lg font-semibold'>Mrs. Uma Beriwala</div>
                                     <div className='text-sm'>CEO, Vipul Motors Pvt. Ltd.</div>
                                 </div>
-                            </div>
+                            </div> */}
 
                         </div>
                     </div>
