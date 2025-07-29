@@ -360,36 +360,6 @@ export const outlets = [
     locationCta: "https://maps.app.goo.gl/TMXcnWwGqYc1WgmeA"
   },
   {
-    title: "Maruti Suzuki True Value (Vipul Motors, Noida, Sector 63)",
-    type: "True Value",
-    address: "J 27, Faridabad - Noida - Ghaziabad Expy, Block J, Sector 63, Noida, Uttar Pradesh",
-    workingHours: "9:30 AM - 8:00 PM",
-    contactNo: "+91 9990057744",
-    email: "contactus@vipulmotors.com",
-    city: "Noida",
-    locationCta: "https://maps.app.goo.gl/ChDJTgDyhAxchy7G7"
-  },
-  {
-    title: "Maruti Suzuki True Value (Vipul Motors, Faridabad, Bata Chowk)",
-    type: "True Value",
-    address: "No.868, PLOT No. B-1/19,B-1/32,B-1/33,B-1/34, (Near Metro Pillar, Mathura Rd, Sector 11, Faridabad, Haryana",
-    workingHours: "9:30 AM - 8:00 PM",
-    contactNo: "+91 9990057744",
-    email: "contactus@vipulmotors.com",
-    city: "Faridabad",
-    locationCta: "https://maps.app.goo.gl/Y4eYzgwBqLd29Vdn8"
-  },
-  {
-    title: "Maruti Suzuki True Value (Vipul Motors, Jaipur, Tonk Road)",
-    type: "True Value",
-    address: "Padmawati Colony-II, opposite of Metro Pillar No 25, Jaipur, Rajasthan",
-    workingHours: "9:30 AM - 8:00 PM",
-    contactNo: "+91 9990057744",
-    email: "contactus@vipulmotors.com",
-    city: "Jaipur",
-    locationCta: "https://maps.app.goo.gl/eNY7KFWadMenzNjF6"
-  },
-  {
     title: "Maruti Suzuki Commercial (Vipul Motors, Jaipur, Apex Circle)",
     type: "Commercial",
     address: "G-18, OKAY PLUS SPACES, G-17, Apex Cir, Malviya Nagar Industrial Area, Malviya Nagar, Jaipur, Rajasthan",

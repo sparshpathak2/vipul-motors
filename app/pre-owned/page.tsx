@@ -18,7 +18,16 @@ export default function page() {
                 </div>
             </div> */}
 
-            <div className="relative h-[120px] sm:h-[240px] flex items-center w-full bg-cover bg-bottom" style={{ backgroundImage: "url('/banner-pre-owned.jpg')" }}>
+            {/* <div className="relative h-[120px] sm:h-[240px] flex items-center w-full bg-cover bg-bottom" style={{ backgroundImage: "url('/banner-pre-owned.jpg')" }}> */}
+
+            <div
+                className="
+                    relative h-[120px] sm:h-[240px] 
+                    flex items-center w-full bg-cover bg-bottom 
+                    bg-[url('/banner-pre-owned-mobile.jpg')] 
+                    sm:bg-[url('/banner-pre-owned-desktop.jpg')]
+                "
+            >
 
                 {/* 🔹 Overlay Layer */}
                 <div className="absolute inset-0 bg-black/50 z-0" />
