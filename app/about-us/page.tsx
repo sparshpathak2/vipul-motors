@@ -167,10 +167,19 @@ export default function page() {
                     {/* <div className=''> */}
                     <div className='flex flex-col gap-4'>
                         <div className='text-3xl font-semibold'>Our Team</div>
-                        <div className='grid grid-cols-1 sm:grid-cols-3 w-full h-full gap-4'>
+                        <div className='grid grid-cols-1 sm:grid-cols-3 w-full h-full sm:gap-4 gap-8'>
 
                             <div className='flex flex-col gap-2'>
-                                <div className='bg-gray-300 h-[300px]'></div>
+                                {/* <div className='bg-gray-300 h-[300px]'></div> */}
+                                <div className='h-[360px] w-full'>
+                                    <Image
+                                        width={200}
+                                        height={200}
+                                        alt='anniversary'
+                                        src='/Mr-Vinit-Beriwala.jpeg'
+                                        className="w-full h-full sm:h-full object-cover object-left"
+                                    />
+                                </div>
 
                                 <div className='flex flex-col gap-1'>
                                     <div className='text-lg font-semibold'>Mr. Vinit Beriwala</div>
@@ -178,21 +187,33 @@ export default function page() {
                                 </div>
                             </div>
                             <div className='flex flex-col gap-2'>
-                                <div className='bg-gray-300 h-[300px]'></div>
+                                {/* <div className='bg-gray-300 h-[300px]'></div> */}
+                                <div className='h-[360px] w-full'>
+                                    <Image
+                                        width={200}
+                                        height={200}
+                                        alt='anniversary'
+                                        src='/Mr-Vitthal-Beriwala.jpeg'
+                                        className="w-full h-full sm:h-full object-cover object-left"
+                                    />
+                                </div>
 
                                 <div className='flex flex-col gap-1'>
                                     <div className='text-lg font-semibold'>Mr. Vitthal Beriwala</div>
                                     <div className='text-sm'>Director, Vipul Motors Pvt. Ltd.</div>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-2'>
+                            {/* <div className='flex flex-col gap-2'>
                                 <div className='bg-gray-300 h-[300px]'></div>
 
                                 <div className='flex flex-col gap-1'>
                                     <div className='text-lg font-semibold'>Mrs. Uma Beriwala</div>
                                     <div className='text-sm'>Director, Vipul Motors Pvt. Ltd.</div>
                                 </div>
-                            </div>
+                            </div> */}
+
+
+
                             {/* <div className='flex flex-col gap-2'>
                                 <div className='bg-gray-300 h-[300px]'></div>
 
