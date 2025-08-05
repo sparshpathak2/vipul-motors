@@ -186,6 +186,7 @@ export default function page() {
                                     <div className='text-sm'>Chairman of the Committee, Vipul Motors Pvt. Ltd.</div>
                                 </div>
                             </div>
+
                             <div className='flex flex-col gap-2'>
                                 {/* <div className='bg-gray-300 h-[300px]'></div> */}
                                 <div className='h-[360px] w-full'>
@@ -203,6 +204,25 @@ export default function page() {
                                     <div className='text-sm'>Director, Vipul Motors Pvt. Ltd.</div>
                                 </div>
                             </div>
+
+                            <div className='flex flex-col gap-2'>
+                                {/* <div className='bg-gray-300 h-[300px]'></div> */}
+                                <div className='h-[360px] w-full'>
+                                    <Image
+                                        width={200}
+                                        height={200}
+                                        alt='anniversary'
+                                        src='/Mr-Manan-Kedia.jpeg'
+                                        className="w-full h-full sm:h-full object-cover object-left"
+                                    />
+                                </div>
+
+                                <div className='flex flex-col gap-1'>
+                                    <div className='text-lg font-semibold'>Mr. Manan Kedia</div>
+                                    <div className='text-sm'>CEO, Vipul Motors Pvt. Ltd.</div>
+                                </div>
+                            </div>
+
                             {/* <div className='flex flex-col gap-2'>
                                 <div className='bg-gray-300 h-[300px]'></div>
 
