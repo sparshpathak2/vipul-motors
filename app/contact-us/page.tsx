@@ -1,8 +1,11 @@
-'use client'
-
 import ContactForm from '@/components/Forms/ContactForm'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import React from 'react'
+
+export const metadata = {
+    title: "Contact Us | Vipul Motors",
+    description: "Have questions? Get in touch with Vipul Motors for sales, service, support, or any general queries. We're here to help!",
+};
 
 export default function page() {
     return (

@@ -1,7 +1,10 @@
-'use client'
-
 import CarLoanForm from '@/components/Forms/CarLoanForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Car Loan | Vipul Motors",
+    description: "Easy and fast car loan options with flexible EMI plans. Vipul Motors helps you finance your dream car effortlessly.",
+};
 
 export default function page() {
     return (

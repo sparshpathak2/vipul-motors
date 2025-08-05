@@ -1,7 +1,10 @@
-'use client'
-
 import DrivingSchoolForm from '@/components/Forms/DrivingSchoolForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Driving School | Vipul Motors",
+    description: "Join Vipul Motors Driving School to learn safe, responsible driving from certified experts with modern training methods.",
+};
 
 export default function page() {
     return (

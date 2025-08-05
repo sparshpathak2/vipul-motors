@@ -1,10 +1,12 @@
-'use client'
-
-import { Button } from '@/components/ui/button'
 import { IconBuildingStore, IconCar, IconCarSuv, IconUsers } from '@tabler/icons-react'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
+
+export const metadata = {
+    title: "About Us | Vipul Motors",
+    description: "Discover the story behind Vipul Motors – our legacy, values, and commitment to delivering unmatched car buying and ownership experiences.",
+};
 
 export default function page() {
     return (

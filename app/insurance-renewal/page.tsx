@@ -1,7 +1,11 @@
-'use client'
-
 import InsuranceForm from '@/components/Forms/InsuranceForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Insurance Renewal | Vipul Motors",
+    description: "Renew your car insurance quickly and conveniently online with Vipul Motors. Get reminders, assistance, and instant renewal options.",
+};
+
 
 export default function page() {
     return (

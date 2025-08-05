@@ -1,7 +1,11 @@
-'use client'
-
 import PreOwnedForm from '@/components/Forms/PreOwnedCarsForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Pre-Owned Cars | Vipul Motors",
+    description: "Buy certified pre-owned Maruti Suzuki cars at great prices. Vipul Motors offers quality assurance and transparent pricing.",
+};
+
 
 export default function page() {
     return (

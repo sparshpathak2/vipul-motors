@@ -1,7 +1,11 @@
-'use client'
-
 import TrueValueForm from '@/components/Forms/TrueValueForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Maruti True Value | Vipul Motors",
+    description: "Buy and sell used Maruti Suzuki cars through Vipul Motors’ True Value with complete trust, inspection, and certification.",
+};
+
 
 export default function page() {
     return (

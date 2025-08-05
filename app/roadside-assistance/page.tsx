@@ -1,7 +1,11 @@
-'use client'
-
 import RoadsideAssistanceForm from '@/components/Forms/RoadsideAssistanceForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Roadside Assistance | Vipul Motors",
+    description: "Stuck on the road? Vipul Motors' 24x7 roadside assistance covers you for emergencies, towing, and breakdown support.",
+};
+
 
 export default function page() {
     return (

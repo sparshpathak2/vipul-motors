@@ -1,7 +1,11 @@
-'use client'
-
 import ServiceForm from '@/components/Forms/ServiceForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Car Service | Vipul Motors",
+    description: "Keep your car running like new. Book servicing with Vipul Motors for regular maintenance, repairs, and genuine spare parts.",
+};
+
 
 export default function page() {
     return (

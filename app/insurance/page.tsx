@@ -1,7 +1,11 @@
-'use client'
-
 import InsuranceForm from '@/components/Forms/InsuranceForm'
 import React from 'react'
+
+export const metadata = {
+    title: "Car Insurance | Vipul Motors",
+    description: "Secure your Maruti Suzuki car with trusted insurance plans. Get instant quotes and hassle-free claims with Vipul Motors.",
+};
+
 
 export default function page() {
     return (
