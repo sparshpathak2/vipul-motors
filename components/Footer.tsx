@@ -56,7 +56,7 @@ export default function Footer() {
                                     <MapPin size={16} />
                                 </div>
                                 <div className='flex flex-col'>
-                                    <div>ARENA Vipul Motors Faridabad</div>
+                                    <div>ARENA Vipul Motors Pvt. Ltd. Faridabad</div>
                                     <div>Mathura Road, 27/5 KM, NH-19, Faridabad, Haryana 121002</div>
                                 </div>
                             </div>
