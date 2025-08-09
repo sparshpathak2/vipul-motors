@@ -456,7 +456,7 @@ export const models: Car[] = [
   },
   {
     name: "Brezza",
-    image: "/Models/Brezza.avif",
+    image: "/models/Brezza.avif",
     category: "Arena",
     displacement: 1462,
     fuelEfficiency: 17.8,
@@ -548,7 +548,7 @@ export const models: Car[] = [
   },
   {
     name: "XL6",
-    image: "/models/Xl6.avif",
+    image: "/models/XL6.avif",
     category: "Nexa",
     displacement: 1462,
     fuelEfficiency: 20.97,
