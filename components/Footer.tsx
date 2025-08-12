@@ -42,6 +42,7 @@ export default function Footer() {
                             <a href='/models'>All Models</a>
                             <a href='/service'>Book A Service</a>
                             <a href='/book-test-drive'>Book A Test Drive</a>
+                            <a href='/csr-policy'>CSR Policy</a>
                             <a href='/contact-us'>Contact Us</a>
                             {/* <a href='terms-and-conditions'>Terms & Conditions</a> */}
                             {/* <a href='privacy-policy'>Privacy Policy</a> */}

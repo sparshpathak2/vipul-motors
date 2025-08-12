@@ -185,7 +185,7 @@ export default function page() {
 
                                 <div className='flex flex-col gap-1'>
                                     <div className='text-lg font-semibold'>Mr. Vinit Beriwala</div>
-                                    <div className='text-sm'>Chairman of the Committee, Vipul Motors Pvt. Ltd.</div>
+                                    <div className='text-sm'>Managing Director, Vipul Motors Pvt. Ltd.</div>
                                 </div>
                             </div>
 
@@ -221,7 +221,7 @@ export default function page() {
 
                                 <div className='flex flex-col gap-1'>
                                     <div className='text-lg font-semibold'>Mr. Manan Kedia</div>
-                                    <div className='text-sm'>CEO, Vipul Motors Pvt. Ltd.</div>
+                                    <div className='text-sm'>CEO Nexa, Vipul Motors Pvt. Ltd.</div>
                                 </div>
                             </div>
 
