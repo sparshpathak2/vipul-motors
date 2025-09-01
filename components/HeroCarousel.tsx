@@ -1,15 +1,16 @@
 "use client";
 
+import { getBanners } from "@/api/media";
+import { Banner } from "@/lib/types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
-
-// const desktopImages = ["/banner-1.jpeg", "/c-1.webp", "/c-2.webp", "/c-3.webp"];
-const desktopImages = ["/cd-2.jpg", "/cd-3.jpg", "/cd-4.jpg", "/cd-1.jpg"];
-const mobileImages = ["/cm-2.jpg", "/cm-3.jpg", "/cm-4.jpg", "/cm-1.jpg"];
+import { Skeleton } from "./ui/skeleton";
 
 export default function HeroCarousel() {
     const [current, setCurrent] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
+    const [banners, setBanners] = useState<Banner[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const checkScreen = () => {
@@ -21,19 +22,78 @@ export default function HeroCarousel() {
         return () => window.removeEventListener("resize", checkScreen);
     }, []);
 
-    const images = isMobile ? mobileImages : desktopImages;
+    // Fetch banners
+    useEffect(() => {
+        const fetchBanners = async () => {
+            try {
+                const response = await getBanners();
+                setBanners(response.data);
+            } catch (err) {
+                console.error("Failed to load banners", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchBanners();
+    }, []);
+
+    // const images = isMobile ? mobileImages : desktopImages;
+
+    // Filter images based on screen type
+    const images = banners
+        .filter((b) => b.screen === (isMobile ? "mobile" : "desktop"))
+        .sort((a, b) => a.order - b.order) // ensure correct order
+        .map((b) => b.image?.url)
+        .filter(Boolean) as string[];
+
+    // const nextSlide = () =>
+    //     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    // const prevSlide = () =>
+    //     setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
 
     const nextSlide = () =>
-        setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+        setCurrent((prev) => (images.length ? (prev + 1) % images.length : 0));
     const prevSlide = () =>
-        setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+        setCurrent((prev) => (images.length ? (prev - 1 + images.length) % images.length : 0));
+
 
     useEffect(() => {
+        if (!images.length) return;
         const interval = setInterval(() => {
             nextSlide();
         }, 4000);
         return () => clearInterval(interval);
     }, [images]);
+
+    // 🔹 Show loader while fetching
+    // if (loading) {
+    //     return (
+    //         <div className="w-full h-64 flex items-center justify-center bg-gray-100">
+    //             <div className="animate-spin rounded-full h-8 w-8 border-2 border-slate-400 border-t-transparent"></div>
+    //         </div>
+    //     );
+    // }
+
+    // 🔹 Show skeleton while fetching
+    if (loading) {
+        return (
+            <div
+                className={`relative w-full mx-auto overflow-hidden ${isMobile ? "aspect-[360/283]" : "aspect-[1366/523]"
+                    }`}
+            >
+                <Skeleton className="w-full h-full" />
+            </div>
+        );
+    }
+
+    // 🔹 Show empty state only if API returned no banners
+    if (!images.length) {
+        return (
+            <div className="w-full h-64 flex items-center justify-center bg-gray-100">
+                <p className="text-gray-500">No banners available</p>
+            </div>
+        );
+    }
 
     return (
         <div
