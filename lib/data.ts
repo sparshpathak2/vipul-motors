@@ -349,16 +349,16 @@ export const outlets = [
     city: "Dausa",
     locationCta: "https://maps.app.goo.gl/fxCbZvgveat9aVCh6"
   },
-  {
-    title: "Nexa Service Vipul Motors Bikaner",
-    type: "Workshop",
-    address: "E-62, Bichwal Industrial Area, Bikaner, Rajasthan",
-    workingHours: "9:30 AM - 8:00 PM",
-    contactNo: "+91 9990057744",
-    email: "contactus@vipulmotors.com",
-    city: "Bikaner",
-    locationCta: "https://maps.app.goo.gl/TMXcnWwGqYc1WgmeA"
-  },
+  // {
+  //   title: "Nexa Service Vipul Motors Bikaner",
+  //   type: "Workshop",
+  //   address: "E-62, Bichwal Industrial Area, Bikaner, Rajasthan",
+  //   workingHours: "9:30 AM - 8:00 PM",
+  //   contactNo: "+91 9990057744",
+  //   email: "contactus@vipulmotors.com",
+  //   city: "Bikaner",
+  //   locationCta: "https://maps.app.goo.gl/TMXcnWwGqYc1WgmeA"
+  // },
   {
     title: "Maruti Suzuki Commercial (Vipul Motors, Jaipur, Apex Circle)",
     type: "Commercial",
@@ -394,6 +394,16 @@ export type Car = {
 
 export const models: Car[] = [
   // ARENA (mass-market)
+  {
+    name: "Victoris",
+    image: "/models/Victoris.webp",
+    category: "Arena",
+    displacement: 1490,
+    fuelEfficiency: 28.6, // taking the highest claimed (strong hybrid)
+    power: 116.0,
+    getPriceListCta: "#",
+    getBrochureCta: "/models/Victoris-Brochure.pdf",
+  },
   {
     name: "Alto K10",
     image: "/models/Alto.avif",

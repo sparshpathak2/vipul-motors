@@ -6,7 +6,7 @@ import { Clock, Mail, MapPin, Phone, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import SearchOutletsModal from '@/components/SearchOutletsModal';
-import FormModal from '@/components/FormModal';
+import FormModal from '@/components/OutletQueryFormModal';
 
 export default function page() {
     const [searchOutletsModal, setSearchOutletsModal] = useState(false)
