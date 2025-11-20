@@ -67,7 +67,7 @@ export default function page() {
                                         <a href="tel:+919990057744" target="_blank" className="font-semibold text-blue-600 underline">
                                             +91 9990057744
                                         </a>
-                                        <div>Mon-Sat from 9 AM to 8 PM</div>
+                                        <div>Mon-Sat from 9 AM to 7 PM</div>
                                     </div>
                                 </div>
                             </div>

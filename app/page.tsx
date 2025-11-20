@@ -394,11 +394,11 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2">
                     <IconGasStation size={24} />
-                    <div>18 KM/L</div>
+                    <div>22 KM/L</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <IconBrandSpeedtest size={22} />
-                    <div>80 BHP</div>
+                    <div>88 BHP</div>
                   </div>
                 </div>
               </div>
@@ -433,15 +433,15 @@ export default function Home() {
                 <div className="flex flex-col gap-1 text-sm">
                   <div className="flex items-center gap-2">
                     <IconEngine size={24} />
-                    <div>1197 CC</div>
+                    <div>1462 CC</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <IconGasStation size={24} />
-                    <div>18 KM/L</div>
+                    <div>21 KM/L</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <IconBrandSpeedtest size={22} />
-                    <div>80 BHP</div>
+                    <div>102 BHP</div>
                   </div>
                 </div>
               </div>
@@ -480,7 +480,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2">
                     <IconGasStation size={24} />
-                    <div>18 KM/L</div>
+                    <div>25 KM/L</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <IconBrandSpeedtest size={22} />
@@ -519,15 +519,15 @@ export default function Home() {
                 <div className="flex flex-col gap-1 text-sm">
                   <div className="flex items-center gap-2">
                     <IconEngine size={24} />
-                    <div>1197 CC</div>
+                    <div>1462 CC</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <IconGasStation size={24} />
-                    <div>18 KM/L</div>
+                    <div>20 KM/L</div>
                   </div>
                   <div className="flex items-center gap-2">
                     <IconBrandSpeedtest size={22} />
-                    <div>80 BHP</div>
+                    <div>102 BHP</div>
                   </div>
                 </div>
               </div>
