@@ -27,7 +27,7 @@ export default function SubNavbar() {
                 </div>
                 <div className='flex gap-2 items-center'>
                     <Clock size={14} className='text-blue-700' />
-                    <div className='text-sm'>Mon-Sun: 9AM-7PM</div>
+                    <div className='text-sm'>Mon-Sun: 9:00 to 19:00</div>
                 </div>
             </div>
         </div>
